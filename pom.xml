@@ -6,7 +6,6 @@
     <groupId>de.hablijack</groupId>
     <artifactId>message-focus</artifactId>
     <version>0.0.1.SNAPSHOT</version>
-    <packaging>jar</packaging>
 
 	<name>messageFocus</name>
 	<url>http://www.message-focus.de</url>
