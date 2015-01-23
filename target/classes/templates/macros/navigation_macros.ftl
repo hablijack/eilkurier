@@ -1,5 +1,5 @@
 <#macro render>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-eilkurier navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -8,11 +8,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
             </div>
 
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <@navigationLinks />
+				<a class="navbar-brand page-scroll" href="#page-top">Eilkurier</a>
                 <@userArea />
             </div>
         </div>
@@ -36,7 +36,7 @@
     </ul>
 </#macro>
 
-<#macro userArea loggedIn=true>
+<#macro userArea loggedIn=false>
 	 <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -65,31 +65,29 @@
         <div class="navbar-login">
             <div class="row">
                 <div class="col-xs-12">
-                      <div class="well">
-                          <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
-                              <div class="form-group">
-                                  <label for="username" class="control-label">Username</label>
-                                  <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
-                                  <span class="help-block"></span>
-                              </div>
-                              <div class="form-group">
-                                  <label for="password" class="control-label">Password</label>
-                                  <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
-                                  <span class="help-block"></span>
-                              </div>
-                              <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
-                              <div class="checkbox">
-                                  <label>
-                                      <input type="checkbox" name="remember" id="remember"> Remember login
-                                  </label>
-                                  <p class="help-block">(if this is a private computer)</p>
-                              </div>
-                              <button type="submit" class="btn btn-success btn-block">Login</button>
-                              <a href="/forgot/" class="btn btn-default btn-block">Help to login</a>
-                              <a href="/new-customer/" class="btn btn-info btn-block">Yes please, register now!</a>
-                          </form>
-                      </div>
-                  </div>
+	                  <form id="loginForm" method="POST" action="/login/" novalidate="novalidate">
+	                      <div class="form-group">
+	                          <label for="username" class="control-label">Username</label>
+	                          <input type="text" class="form-control" id="username" name="username" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
+	                          <span class="help-block"></span>
+	                      </div>
+	                      <div class="form-group">
+	                          <label for="password" class="control-label">Password</label>
+	                          <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+	                          <span class="help-block"></span>
+	                      </div>
+	                      <div id="loginErrorMsg" class="alert alert-error hide">Wrong username og password</div>
+	                      <div class="checkbox">
+	                          <label>
+	                              <input type="checkbox" name="remember" id="remember"> Remember login
+	                          </label>
+	                          <p class="help-block">(if this is a private computer)</p>
+	                      </div>
+	                      <button type="submit" class="btn btn-success btn-block">Login</button>
+	                      <a href="/forgot/" class="btn btn-default btn-block">Help to login</a>
+	                      <a href="/new-customer/" class="btn btn-info btn-block">Yes please, register now!</a>
+	                  </form>
+	              </div>
             </div>
         </div>
     </li>
