@@ -1,2 +1,2 @@
-# messageFocus
-Webapp zum personalisierten Sammeln von Informationen
+# eilkurier.de
+Webapp zum personalisierten Sammeln und Austauschen von Informationen
