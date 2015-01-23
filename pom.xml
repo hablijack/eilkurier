@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.hablijack</groupId>
-    <artifactId>message-focus</artifactId>
+    <artifactId>eilkurier</artifactId>
     <version>0.0.1.SNAPSHOT</version>
 
-	<name>messageFocus</name>
-	<url>http://www.message-focus.de</url>
+	<name>eilkurier.de</name>
+	<url>http://www.eilkurier.de</url>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
