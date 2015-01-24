@@ -1,22 +1,25 @@
 <#macro render>
 	<nav class="navbar navbar-eilkurier navbar-fixed-top" role="navigation">
         <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <@navigationLinks />
-				<a class="navbar-brand page-scroll" href="#page-top">Eilkurier</a>
+                
+                <@navigationBrand />
+                
                 <@userArea />
             </div>
         </div>
+	    <div class="text-center navbar-slogan" style="">NACHRICHTEN, WIE SIE SEIN SOLLTEN</div>
     </nav>
+</#macro>
+
+<#macro navigationBrand>
+	<div class="navbar-brand">
+        <a href="#">
+        	<img src="img/logo_header.png" />
+        	<span class="brand-name">Eilkurier.de</span>
+        </a>
+    </div>
 </#macro>
 
 <#macro navigationLinks>
@@ -25,13 +28,13 @@
             <a class="page-scroll" href="#page-top"></a>
         </li>
         <li>
-            <a class="page-scroll" href="#about">About</a>
+            <a class="page-scroll" href="#about">Info</a>
         </li>
         <li>
-            <a class="page-scroll" href="#services">Services</a>
+            <a class="page-scroll" href="#services">Features</a>
         </li>
         <li>
-            <a class="page-scroll" href="#contact">Contact</a>
+            <a class="page-scroll" href="#contact">Kontakt</a>
         </li>
     </ul>
 </#macro>
@@ -99,7 +102,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <p class="text-center">
-                        <span class="glyphicon glyphicon-user icon-size"></span>
+                        <span class="glyphicon glyphicon-user navbar-user-icon"></span>
                     </p>
                 </div>
                 <div class="col-lg-8">

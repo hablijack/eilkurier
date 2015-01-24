@@ -32,4 +32,6 @@
 <#macro js>
     <script src="js/external/jquery.js"></script>
     <script src="js/external/bootstrap.min.js"></script>
+    <script src="js/external/jquery.easing.min.js"></script>
+    <script src="js/app/homepage.js"></script>
 </#macro>

@@ -1,6 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Brawler);
+
 body {
     width: 100%;
     height: 100%;
+    font-family: 'Brawler', serif;
+    color: black;
+    padding-top: 120px;
 }
 
 html {
@@ -8,8 +13,12 @@ html {
     height: 100%;
 }
 
+h1, h2, h3, h4 {
+	text-transform: uppercase;
+}
+
 @media(min-width:767px) {
-    .navbar {
+    .navbar-eilkurier .container {
         padding: 20px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -21,33 +30,116 @@ html {
     }
 }
 
+/* LINKS ================================================= */ 
 a {
 	text-decoration: underline;
+	color: #7F1F00;
 }
 
+
+/* NAVIGATION ============================================ */
 .navbar-eilkurier {
-	background-image: -webkit-linear-gradient(top, #ffffff 0%, #dfdfdf 100%);
-	background-image: linear-gradient(to bottom, #ffffff 0%, #dfdfdf 100%);
-	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
+	background-color: #6B2F1B;
+	padding: 0px;
+	margin-bottom: 0px;
+	border-bottom: 2px solid #6B2F1B;
 }
-
-nav a {
+.navbar-eilkurier a {
 	text-decoration: none;
+	color: white;
+	font-family: "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+	font-weight: bold;
+}
+.navbar-eilkurier a:hover {
+	color: white;	
+}
+.navbar-eilkurier li > a:hover, .navbar-eilkurier li > a:active, .navbar-eilkurier li > a:focus {
+	border: none;
+	background: none;
+	text-shadow: 0 0 2px rgba(255,255,255,1) , 0 0 5px #7F1F00 , 0 0 7px #7F1F00 , 0 0 10px #7F1F00 , 0 0 17px #7F1F00 , 0 0 20px #7F1F00 , 0 0 25px #7F1F00 ;
+  	-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  	-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  	-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  	transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.navbar-login {
+.navbar-eilkurier .container {
+	padding: 20px 0; 
+}
+.navbar-eilkurier .navbar-brand {
+	margin-left: 35px !important;
+}
+
+.navbar-eilkurier .navbar-brand a {
+	font-weight: bold;
+	font-family: 'Brawler', serif;
+	font-size: 38px;
+}
+.navbar-eilkurier .navbar-brand a:hover, .navbar-eilkurier .navbar-brand a:active, .navbar-eilkurier .navbar-brand a:focus {
+	border: none;
+	text-shadow: 0 0 2px rgba(255,255,255,1) , 0 0 5px #7F1F00 , 0 0 7px #7F1F00 , 0 0 10px #7F1F00 , 0 0 17px #7F1F00 , 0 0 20px #7F1F00 , 0 0 25px #7F1F00 ;
+  	-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  	-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  	-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  	transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+.navbar-eilkurier .navbar-brand a img {
+	max-height: 49px;
+	position: relative; 
+	top: -14px;
+	float: left;
+}
+.navbar-eilkurier .navbar-right li a:hover, .navbar-eilkurier .navbar-right li a:active, .navbar-eilkurier .navbar-right li a:focus {
+	background: none;
+}
+.navbar-eilkurier .navbar-login {
     width: 305px;
     padding: 10px;
     padding-bottom: 0px;
 }
-
-.navbar-login-session {
+.navbar-eilkurier .navbar-login-session {
     padding: 10px;
     padding-bottom: 0px;
     padding-top: 0px;
 }
-
-.icon-size {
+.navbar-eilkurier .navbar-user-icon {
     font-size: 87px;
+}
+.navbar-slogan {
+	background-color: white; 
+	font-family: "Lucida Grande",Verdana,Arial,Helvetica,sans-serif; 
+	color: #6B2F1B; 
+	font-weight: bold;
+	line-height: 16px
+}
+
+/* HOMEPAGE */
+#homepage-content .info .info-text {
+	font-size: 16px;
+}
+#homepage-content .main-text {
+    position: absolute;
+    top: 0px;
+    width: 96.66666666666666%;
+}
+#homepage-content .btn-min-block {
+    min-width: 170px;
+    line-height: 26px;
+}
+#homepage-content .carousel-inner {
+	height: 400px;
+}
+#homepage-content .carousel-control {
+	background: none;
+	color: #6B2F1B;
+}
+#homepage-content .carousel-indicators li {
+	border: 1px solid black;
+	background-color: #6B2F1B;
+}
+#homepage-content .carousel-indicators li.active {
+	background-color: #FF784C;
+}
+#homepage-content .service h2 {
+	margin:0;
 }

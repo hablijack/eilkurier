@@ -1,4 +1,4 @@
-<@layout.doctype />
+<@compress single_line=true><@layout.doctype />
 <html lang="de">
 
 	<head>
@@ -21,4 +21,4 @@
 
 	</body>
 	
-</html>
+</html></@compress>
