@@ -25,7 +25,10 @@
 	                    	Wir gehen sogar noch einen Schritt weiter: Wäre es nicht schön wenn diese News nicht an eine
 	                    	bestimmte Ausgabe gebunden sind, sondern immer topaktuell vorliegen? 
 	                    </p> 
-	                    
+	                    <p>
+	                    	Der Eilkurier ist komplett kostenlos und wird es immer sein. Wenn Du nähres zu unserem Geschäftsmodell erfahren möchtest 
+	                    	erhältst Du hier weiter informationen. 
+	                    </p>
 	                </div>
 	            </div>
 	        </div>
@@ -42,7 +45,31 @@
 	    <#-- LOGIN AREA ================================================= -->
 	    <section class="login" id="login">
 			<div class="container">
-				
+				<div class="row">
+	                <div class="col-xs-12">
+						<form role="form" action="/login" method="post">
+			              	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+			                  <div class="form-group">
+			                      <label for="email" class="control-label">Benutzer</label>
+			                      <input type="text" class="form-control" id="email" name="email" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
+			                      <span class="help-block"></span>
+			                  </div>
+			                  <div class="form-group">
+			                      <label for="password" class="control-label">Passwort</label>
+			                      <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
+			                      <span class="help-block"></span>
+			                  </div>
+			                  <div>
+							      <label for="remember-me" class="checkbox-label">Remember me</label>
+							      <input type="checkbox" name="remember-me" id="remember-me"/>
+							  </div>
+			                  <div id="loginErrorMsg" class="alert alert-error <#if error?exists && error.isPresent()>error<#else>hide</#if>">
+			                  		Wrong username og password
+			                  </div>
+			                  <button type="submit" class="btn btn-success btn-block">Anmelden</button>
+			            </form>
+			       </div>
+			    </div>
 			</div>
 		</section>
 	     
@@ -59,7 +86,7 @@
 	    	<div class="container">
 			    <div class="row">
 			        <div class="col-md-12">
-			            <div class="carousel slide" data-ride="carousel" id="service-carousel">
+			            <div class="carousel slide" id="service-carousel">
 			                <ol class="carousel-indicators">
 			                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 			                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -69,28 +96,43 @@
 			                </ol>
 			                <div class="carousel-inner">
 			                    <div class="item active">
-			                    	<div class="col-md-10 col-md-offset-1">
+			                    	<div class="col-md-4 col-md-offset-2">
 			                    		<h3>Zeit sparen</h3>
+			                    	</div>
+			                    	<div class="col-md-4">
+			                    		<img src="http://placehold.it/350x250" />
 			                    	</div>
 			                    </div>
 			                    <div class="item">	
-			                    	<div class="col-md-10 col-md-offset-1">
+			                    	<div class="col-md-4 col-md-offset-2">
+			                    		<img src="http://placehold.it/350x250" />
+			                    	</div>
+			                    	<div class="col-md-4">
 			                    		<h3>Geldbeutel schonen</h3>
 			                    	</div>
 			                    </div>
 			                    <div class="item">
-			                    	<div class="col-md-10 col-md-offset-1">
+			                    	<div class="col-md-4 col-md-offset-102">
 			                    		<h3>Nerven schonen</h3>
+			                    	</div>
+			                    	<div class="col-md-4">
+			                    		<img src="http://placehold.it/350x250" />
 			                    	</div>
 			                    </div>
 			                    <div class="item">
-			                    	<div class="col-md-10 col-md-offset-1">
+			                    	<div class="col-md-4 col-md-offset-2">
+			                    		<img src="http://placehold.it/350x250" />
+			                    	</div>
+			                    	<div class="col-md-4">
 			                    		<h3>Immer Topaktuell</h3>
 			                    	</div>
 			                    </div>
 			                    <div class="item">
-			                    	<div class="col-md-10 col-md-offset-1">
+			                    	<div class="col-md-4 col-md-offset-2">
 			                    		<h3>Modernes Medium</h3>
+			                    	</div>
+			                    	<div class="col-md-4">
+			                    		<img src="http://placehold.it/350x250" />
 			                    	</div>
 			                    </div>
 			                </div>
@@ -107,7 +149,7 @@
 			                        Wir haben die Lösung:
 			                    </h2>
 			                    <div class="">
-			                    	JETZT
+			                    	JETZT KOSTENLOS
 			                        <a href="http://www.jquery2dotnet.com/">Anmelden</a>
 			                        ODER
 			                        <a href="http://www.jquery2dotnet.com/">Registrieren</a>

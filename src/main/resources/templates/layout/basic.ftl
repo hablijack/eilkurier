@@ -11,7 +11,7 @@
 	
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    	<@navigation.render />
+    	<@navigation.render currentUser=currentUser />
 
 		<div class="page-content">
 			${template}

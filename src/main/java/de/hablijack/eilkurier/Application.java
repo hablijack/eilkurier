@@ -1,4 +1,4 @@
-package de.hablijack.eilkurier.configuration;
+package de.hablijack.eilkurier;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan( {"de.hablijack.eilkurier.*"} )
+@ComponentScan
 public class Application {
     
     public static void main(String[] args) {

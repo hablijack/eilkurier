@@ -92,6 +92,9 @@ a {
 .navbar-eilkurier .navbar-right li a:hover, .navbar-eilkurier .navbar-right li a:active, .navbar-eilkurier .navbar-right li a:focus {
 	background: none;
 }
+.navbar-eilkurier .navbar-right li.open > a { 
+	background: none;
+}
 .navbar-eilkurier .navbar-login {
     width: 305px;
     padding: 10px;
@@ -142,4 +145,15 @@ a {
 }
 #homepage-content .service h2 {
 	margin:0;
+}
+#homepage-content .carousel-inner h3 {
+	margin: 0;
+}
+#homepage-content .item {
+	padding-top: 80px;
+}
+#homepage-content .login .container {
+	background-color: #6B2F1B;
+	color: white;
+	font-family: "Lucida Grande",Verdana,Arial,Helvetica,sans-serif; 
 }
