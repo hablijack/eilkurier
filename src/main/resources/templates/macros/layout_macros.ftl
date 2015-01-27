@@ -22,6 +22,7 @@
 <#macro css>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/eilkurier.css" rel="stylesheet">
+	<link href="css/buttons.css" rel="stylesheet">
 	
 	<!--[if lt IE 9]>
 		<script src="js/external/html5shiv.js"></script>

@@ -34,55 +34,40 @@
 	        </div>
 	     </section>
 	     
-	     <div class="container">
-		    <div class="row">
-		        <div class="col-md-12">
-		        	<hr/>
-		       	</div>
-		    </div>
-		</div>
-	    
 	    <#-- LOGIN AREA ================================================= -->
 	    <section class="login" id="login">
 			<div class="container">
 				<div class="row">
-	                <div class="col-xs-12">
+					<div class="col-md-8 col-md-offset-4 <#if error?exists && error.isPresent()>error<#else>hide</#if>">
+						<div id="loginErrorMsg" class="alert alert-error">
+			            	Wrong username og password
+			            </div>
+			         </div>
+			    </div>
+				<div class="row">
+					<div class="col-md-4 hidden-xs login-logo">Login</div>
+	                <div class="col-md-8">
 						<form role="form" action="/login" method="post">
 			              	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 			                  <div class="form-group">
-			                      <label for="email" class="control-label">Benutzer</label>
 			                      <input type="text" class="form-control" id="email" name="email" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
-			                      <span class="help-block"></span>
+			                      <label for="email" class="control-label">Benutzer</label>
 			                  </div>
 			                  <div class="form-group">
-			                      <label for="password" class="control-label">Passwort</label>
 			                      <input type="password" class="form-control" id="password" name="password" value="" required="" title="Please enter your password">
-			                      <span class="help-block"></span>
+			                      <label for="password" class="control-label">Passwort</label>
 			                  </div>
-			                  <div>
-							      <label for="remember-me" class="checkbox-label">Remember me</label>
-							      <input type="checkbox" name="remember-me" id="remember-me"/>
-							  </div>
-			                  <div id="loginErrorMsg" class="alert alert-error <#if error?exists && error.isPresent()>error<#else>hide</#if>">
-			                  		Wrong username og password
+			                  <div class="form-group">
+			                  	<button type="submit" class="btn btn-primary btn-lg">Anmelden</button>
 			                  </div>
-			                  <button type="submit" class="btn btn-success btn-block">Anmelden</button>
 			            </form>
 			       </div>
 			    </div>
 			</div>
 		</section>
 	     
-	    <div class="container">
-		    <div class="row">
-		        <div class="col-md-12">
-		        	<hr/>
-		       	</div>
-		    </div>
-		</div>
-	     
 	    <#-- SERVICE AREA ================================================= --> 
-	    <section class="service" >
+	    <section class="service" id="service">
 	    	<div class="container">
 			    <div class="row">
 			        <div class="col-md-12">
@@ -100,12 +85,12 @@
 			                    		<h3>Zeit sparen</h3>
 			                    	</div>
 			                    	<div class="col-md-4">
-			                    		<img src="http://placehold.it/350x250" />
+			                    		<img src="http://placehold.it/350x300" />
 			                    	</div>
 			                    </div>
 			                    <div class="item">	
 			                    	<div class="col-md-4 col-md-offset-2">
-			                    		<img src="http://placehold.it/350x250" />
+			                    		<img src="http://placehold.it/350x300" />
 			                    	</div>
 			                    	<div class="col-md-4">
 			                    		<h3>Geldbeutel schonen</h3>
@@ -116,12 +101,12 @@
 			                    		<h3>Nerven schonen</h3>
 			                    	</div>
 			                    	<div class="col-md-4">
-			                    		<img src="http://placehold.it/350x250" />
+			                    		<img src="http://placehold.it/350x300" />
 			                    	</div>
 			                    </div>
 			                    <div class="item">
 			                    	<div class="col-md-4 col-md-offset-2">
-			                    		<img src="http://placehold.it/350x250" />
+			                    		<img src="http://placehold.it/350x300" />
 			                    	</div>
 			                    	<div class="col-md-4">
 			                    		<h3>Immer Topaktuell</h3>
@@ -132,7 +117,7 @@
 			                    		<h3>Modernes Medium</h3>
 			                    	</div>
 			                    	<div class="col-md-4">
-			                    		<img src="http://placehold.it/350x250" />
+			                    		<img src="http://placehold.it/350x300" />
 			                    	</div>
 			                    </div>
 			                </div>
