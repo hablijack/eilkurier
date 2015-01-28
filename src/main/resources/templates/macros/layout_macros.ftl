@@ -15,8 +15,14 @@
     <meta name="author" content="">
 </#macro>
 
-<#macro pagetitle>
-	<title>Scrolling Nav - Start Bootstrap Template</title>
+<#macro pagetitle title="">
+	<title>
+		<#if title?exists && title?has_content>
+			${title}
+		<#else>
+			Eilkurier.de - Nachrichten wie Sie sein sollten
+		</#if>
+	</title>
 </#macro>
 
 <#macro css>
@@ -28,6 +34,8 @@
 		<script src="js/external/html5shiv.js"></script>
 	    <script src="js/external/respond.min.js"></script>
 	<![endif]-->
+	
+	<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </#macro>
 
 <#macro js>

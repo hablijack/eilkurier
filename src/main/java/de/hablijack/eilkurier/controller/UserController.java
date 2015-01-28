@@ -12,7 +12,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -39,24 +38,18 @@ public class UserController {
         binder.addValidators(userCreateFormValidator);
     }
 
-    @RequestMapping("/user/{id}")
-    public ModelAndView getUserPage(@PathVariable Long id) {
-        LOGGER.debug("Getting user page for user={}", id);
-        return new ModelAndView("test/user", "user", userService.getUserById(id));
-    }
-
-    @RequestMapping(value = "/user/create", method = RequestMethod.GET)
+    @RequestMapping(value = "/register_user.html", method = RequestMethod.GET)
     public ModelAndView getUserCreatePage() {
         LOGGER.debug("Getting user create form");
-        return new ModelAndView("test/user_create", "form", new UserCreateForm());
+        return new ModelAndView("registerUser", "form", new UserCreateForm());
     }
 
-    @RequestMapping(value = "/user/create", method = RequestMethod.POST)
+    @RequestMapping(value = "/register_user.html", method = RequestMethod.POST)
     public String handleUserCreateForm(@Valid @ModelAttribute("form") UserCreateForm form, BindingResult bindingResult) {
         LOGGER.debug("Processing user create form={}, bindingResult={}", form, bindingResult);
         if (bindingResult.hasErrors()) {
             // failed validation
-            return "test/user_create";
+            return "registerUser";
         }
         try {
             userService.create(form);
@@ -65,10 +58,10 @@ public class UserController {
             // at the same time and form validation has passed for more than one of them.
             LOGGER.warn("Exception occurred when trying to save the user, assuming duplicate email", e);
             bindingResult.reject("email.exists", "Email already exists");
-            return "test/user_create";
+            return "registerUser";
         }
         // ok, redirect
-        return "redirect:/test/users";
+        return "redirect:/";
     }
 
 }

@@ -15,7 +15,7 @@
 
 <#macro navigationBrand>
 	<div class="navbar-brand">
-        <a href="#">
+        <a href="/index.html">
         	<img src="img/logo_header.png" />
         	<span class="brand-name">Eilkurier.de</span>
         </a>
@@ -87,9 +87,9 @@
 	                      <div id="loginErrorMsg" class="alert alert-error <#if error?exists && error.isPresent()>error<#else>hide</#if>">
 	                      		Wrong username og password
 	                      </div>
-	                      <button type="submit" class="btn btn-success btn-block">Anmelden</button>
+	                      <button type="submit" class="btn btn-primary btn-block">Anmelden</button>
 	                      <a href="/forgot_password.html" class="btn btn-default btn-block">Passwort vergessen?</a>
-	                      <a href="/register.html" class="btn btn-info btn-block">Registrieren</a>
+	                      <a href="/register_user.html" class="btn btn-info btn-block">Registrieren</a>
 	                  </form>
 	              </div>
             </div>
