@@ -38,6 +38,11 @@
         	<groupId>org.springframework.boot</groupId>
         	<artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
+		<dependency>
+			<groupId>rome</groupId>
+			<artifactId>rome-fetcher</artifactId>
+			<version>1.0</version>
+		</dependency>
     </dependencies>
 
     <properties>

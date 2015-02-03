@@ -1,7 +1,10 @@
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/repository/UserRepository.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/service/UserServiceImpl.java
+/home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/repository/FeedRepository.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/CurrentUser.java
+/home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/repository/InfoRepository.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/configuration/SecurityConfiguration.java
+/home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/Feed.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/controller/ExceptionHandlerControllerAdvice.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/service/CurrentUserDetailsService.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/UserCreateForm.java
@@ -9,9 +12,13 @@
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/Role.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/User.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/controller/LoginController.java
+/home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/controller/ReaderController.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/configuration/DatabaseConfiguration.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/Application.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/controller/HomepageController.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/controller/UserController.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/service/UserService.java
+/home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/cron/FeedParser.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/validator/UserCreateFormValidator.java
+/home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/Info.java
+/home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/Category.java

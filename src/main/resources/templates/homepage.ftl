@@ -1,4 +1,5 @@
 <@layout.basic>
+	<link href="css/homepage.css" rel="stylesheet">
 	<section id="homepage-content" class="page-content">
 	
 		<#-- INFO AREA ================================================= -->

@@ -1,0 +1,12 @@
+#register .well {
+	background-color: #6B2F1B;
+	color: white;
+}
+
+#register .row {
+	height: 350px;
+}
+
+#register .row .col-md-6, #register .row .col-md-6 .well {
+	height: 100%;
+}
