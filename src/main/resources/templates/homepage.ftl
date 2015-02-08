@@ -1,4 +1,5 @@
 <@layout.basic>
+	<script src="/js/app/homepage.js"></script>
 	<link href="css/homepage.css" rel="stylesheet">
 	<section id="homepage-content" class="page-content">
 	
@@ -136,9 +137,9 @@
 			                    </h2>
 			                    <div class="">
 			                    	JETZT KOSTENLOS
-			                        <a href="http://www.jquery2dotnet.com/">Anmelden</a>
+			                        <a href="#">Anmelden</a>
 			                        ODER
-			                        <a href="http://www.jquery2dotnet.com/">Registrieren</a>
+			                        <a href="/user/create">Registrieren</a>
 			                    </div>
 			                </div>
 			            </div>

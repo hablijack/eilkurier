@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
-import de.hablijack.eilkurier.domain.UserCreateForm;
+import de.hablijack.eilkurier.form.UserCreateForm;
 import de.hablijack.eilkurier.service.UserService;
 
 @Component

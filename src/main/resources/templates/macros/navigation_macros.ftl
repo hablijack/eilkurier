@@ -16,7 +16,7 @@
 <#macro navigationBrand>
 	<div class="navbar-brand">
         <a href="/index.html">
-        	<img src="img/logo_header.png" />
+        	<img src="/img/logo_header.png" />
         	<span class="brand-name">Eilkurier.de</span>
         </a>
     </div>
@@ -89,7 +89,7 @@
 	                      </div>
 	                      <button type="submit" class="btn btn-primary btn-block">Anmelden</button>
 	                      <a href="/forgot_password.html" class="btn btn-default btn-block">Passwort vergessen?</a>
-	                      <a href="/register_user.html" class="btn btn-info btn-block">Registrieren</a>
+	                      <a href="/user/create" class="btn btn-info btn-block">Registrieren</a>
 	                  </form>
 	              </div>
             </div>

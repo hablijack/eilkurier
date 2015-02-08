@@ -4,7 +4,7 @@ package de.hablijack.eilkurier.service;
 import java.util.Optional;
 
 import de.hablijack.eilkurier.domain.User;
-import de.hablijack.eilkurier.domain.UserCreateForm;
+import de.hablijack.eilkurier.form.UserCreateForm;
 
 public interface UserService {
 

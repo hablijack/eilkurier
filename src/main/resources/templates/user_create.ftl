@@ -7,7 +7,7 @@
 
 					<h1>Deinen eigener Eilkurier</h1> 
 					
-					<form role="form" name="form" action="/user/register.html" method="post">
+					<form role="form" name="form" action="/user/create" method="post">
 						<@spring.bind "form" />
 						<#if spring.status.error>
 							<ul>

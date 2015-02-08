@@ -29,12 +29,15 @@ public class Feed {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "description", nullable = false)
+    @Column(name = "description")
     private String description;
 
     @Lob @Basic(fetch = FetchType.LAZY)
     @Column(name = "picture", nullable = false, length=100000)
-    private String picture;
+    private byte[] picture;
+    
+    @Column(name="picture_content_type")
+    private String pictureContentType;
 
     @ManyToMany(fetch=FetchType.LAZY)
     private List<Category> categories;
@@ -82,11 +85,19 @@ public class Feed {
 		this.description = description;
 	}
 
-	public String getPicture() {
+	public byte[] getPicture() {
 		return picture;
 	}
 
-	public void setPicture(String picture) {
+	public void setPicture(byte[] picture) {
 		this.picture = picture;
+	}
+
+	public String getPictureContentType() {
+		return pictureContentType;
+	}
+
+	public void setPictureContentType(String pictureContentType) {
+		this.pictureContentType = pictureContentType;
 	}
 }

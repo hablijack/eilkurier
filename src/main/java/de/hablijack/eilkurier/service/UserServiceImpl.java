@@ -10,7 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import de.hablijack.eilkurier.domain.User;
-import de.hablijack.eilkurier.domain.UserCreateForm;
+import de.hablijack.eilkurier.form.UserCreateForm;
 import de.hablijack.eilkurier.repository.UserRepository;
 
 @Service

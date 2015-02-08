@@ -16,40 +16,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import de.hablijack.eilkurier.domain.UserCreateForm;
 import de.hablijack.eilkurier.domain.validator.UserCreateFormValidator;
+import de.hablijack.eilkurier.form.UserCreateForm;
 import de.hablijack.eilkurier.service.UserService;
 
 @Controller
 public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
-    private final UserService userService;
-    private final UserCreateFormValidator userCreateFormValidator;
-
     @Autowired
-    public UserController(UserService userService, UserCreateFormValidator userCreateFormValidator) {
-        this.userService = userService;
-        this.userCreateFormValidator = userCreateFormValidator;
-    }
+    private UserService userService;
+    @Autowired
+    private UserCreateFormValidator userCreateFormValidator;
 
     @InitBinder("form")
     public void initBinder(WebDataBinder binder) {
         binder.addValidators(userCreateFormValidator);
     }
 
-    @RequestMapping(value = "/register_user.html", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/create", method = RequestMethod.GET)
     public ModelAndView getUserCreatePage() {
         LOGGER.debug("Getting user create form");
-        return new ModelAndView("registerUser", "form", new UserCreateForm());
+        return new ModelAndView("user_create", "form", new UserCreateForm());
     }
 
-    @RequestMapping(value = "/register_user.html", method = RequestMethod.POST)
+    @RequestMapping(value = "/user/create", method = RequestMethod.POST)
     public String handleUserCreateForm(@Valid @ModelAttribute("form") UserCreateForm form, BindingResult bindingResult) {
         LOGGER.debug("Processing user create form={}, bindingResult={}", form, bindingResult);
         if (bindingResult.hasErrors()) {
             // failed validation
-            return "registerUser";
+            return "user_create";
         }
         try {
             userService.create(form);
@@ -58,7 +54,7 @@ public class UserController {
             // at the same time and form validation has passed for more than one of them.
             LOGGER.warn("Exception occurred when trying to save the user, assuming duplicate email", e);
             bindingResult.reject("email.exists", "Email already exists");
-            return "registerUser";
+            return "user_create";
         }
         // ok, redirect
         return "redirect:/";
