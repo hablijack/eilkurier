@@ -1,6 +1,4 @@
 <@layout.basic>
-	<script src="/js/app/homepage.js"></script>
-	<link href="css/homepage.css" rel="stylesheet">
 	<section id="homepage-content" class="page-content">
 	
 		<#-- INFO AREA ================================================= -->

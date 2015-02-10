@@ -7,6 +7,7 @@
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/controller/LoginController.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/controller/ReaderController.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/configuration/DatabaseConfiguration.java
+/home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/configuration/WebApplicationConfiguration.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/validator/CategoryCreateFormValidator.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/controller/FeedController.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/form/UserCreateForm.java
@@ -33,3 +34,4 @@
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/cron/FeedParser.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/domain/Info.java
 /home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/form/FeedCreateForm.java
+/home/christoph/Workspace/eilkurier.de/src/main/java/de/hablijack/eilkurier/interceptor/ModelBaseInterceptor.java

@@ -6,7 +6,7 @@
 	
 	    <@layout.pagetitle />
 	
-		<@layout.css />
+		<@layout.css controllerId=controllerId />
 	</head>
 	
 	<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -17,7 +17,7 @@
 			${template}
 		</div>
 
-		<@layout.js />
+		<@layout.js controllerId=controllerId />
 
 	</body>
 	
