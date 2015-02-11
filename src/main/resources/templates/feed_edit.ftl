@@ -32,7 +32,7 @@
 					    </div>
 					    <div class="form-group">
 					        <label for="picture">Bild / Logo:</label>
-					        <input type="file" name="picture" class="form-control" id="picture" value="${form.picture}"/>
+					        <input type="file" name="picture" class="form-control" id="picture"/>
 					    </div>
 					    <button class="btn btn-primary" type="submit">Speichern</button>
 					</form>

@@ -9,7 +9,7 @@ import de.hablijack.eilkurier.form.FeedCreateForm;
 
 public interface FeedService {
 
-    Optional<Feed> getFeedById(long id);
+    Feed getFeedById(long id);
 
     Feed create(FeedCreateForm form);
 

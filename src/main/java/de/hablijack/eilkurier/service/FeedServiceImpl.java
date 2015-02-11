@@ -25,13 +25,16 @@ public class FeedServiceImpl implements FeedService {
     public Feed create(FeedCreateForm form) {
         Feed feed = new Feed();
         feed.setName(form.getName());
+        feed.setPicture(form.getPicture());
+        feed.setDescription(form.getDescription());
+        feed.setUrl(form.getUrl());
         return feedRepository.save(feed);
     }
 
 	@Override
-	public Optional<Feed> getFeedById(long id) {
+	public Feed getFeedById(long id) {
 		 LOGGER.debug("Getting user={}", id);
-	     return Optional.ofNullable(feedRepository.findOne(id));
+	     return feedRepository.findOne(id);
 	}
 
 	@Override

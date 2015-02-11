@@ -10,11 +10,14 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.ServletRequestDataBinder;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import org.springframework.web.servlet.ModelAndView;
 
 import de.hablijack.eilkurier.domain.validator.FeedCreateFormValidator;
@@ -35,6 +38,18 @@ public class FeedController {
         binder.addValidators(feedCreateFormValidator);
     }
     
+    @InitBinder
+    protected void initBinder(ServletRequestDataBinder binder) {
+        binder.registerCustomEditor(byte[].class, new ByteArrayMultipartFileEditor());
+    }
+    
+    @RequestMapping(value = "/feed/{id}", method = RequestMethod.GET)
+    public String getAllFeeds(Model model, @PathVariable("id") int id) {
+        LOGGER.debug("Getting all feeds");
+        model.addAttribute("feed", feedService.getFeedById(id));
+        return "feed_view";
+    }
+    
     @RequestMapping(value = "/feeds", method = RequestMethod.GET)
     public String getAllFeeds(Model model) {
         LOGGER.debug("Getting all feeds");
@@ -45,15 +60,17 @@ public class FeedController {
     @RequestMapping(value = "/feed/create", method = RequestMethod.GET)
     public ModelAndView getUserCreatePage() {
         LOGGER.debug("Getting feed create form");
-        return new ModelAndView("feed", "form", new FeedCreateForm());
+        return new ModelAndView("feed_edit", "form", new FeedCreateForm());
     }
 
     @RequestMapping(value = "/feed/create", method = RequestMethod.POST)
-    public String handleUserCreateForm(@Valid @ModelAttribute("form") FeedCreateForm form, BindingResult bindingResult) {
+    public String handleUserCreateForm(
+    	@Valid @ModelAttribute("form") FeedCreateForm form, 
+    	BindingResult bindingResult) {
         LOGGER.debug("Processing feed create form={}, bindingResult={}", form, bindingResult);
         if (bindingResult.hasErrors()) {
             // failed validation
-            return "feed";
+            return "feed_edit";
         }
         try {
             feedService.create(form);
@@ -62,10 +79,10 @@ public class FeedController {
             // at the same time and form validation has passed for more than one of them.
             LOGGER.warn("Exception occurred when trying to save the feed, assuming duplicate email", e);
             bindingResult.reject("name.exists", "Email already exists");
-            return "feed";
+            return "feed_edit";
         }
         // ok, redirect
-        return "redirect:/";
+        return "redirect:/feeds";
     }
 
 }

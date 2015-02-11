@@ -9,7 +9,7 @@ import de.hablijack.eilkurier.form.CategoryCreateForm;
 
 public interface CategoryService {
 
-    Optional<Category> getCategoryById(long id);
+    Category getCategoryById(long id);
 
     Category create(CategoryCreateForm form);
 

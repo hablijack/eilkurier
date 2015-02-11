@@ -14,6 +14,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.apache.xerces.impl.dv.util.Base64;
+
 @Entity
 @Table(name = "feed")
 public class Feed {
@@ -99,5 +101,9 @@ public class Feed {
 
 	public void setPictureContentType(String pictureContentType) {
 		this.pictureContentType = pictureContentType;
+	}
+	
+	public String getBase64Picture() {
+		return Base64.encode(picture);
 	}
 }

@@ -12,7 +12,7 @@ public class FeedCreateForm {
     
     private String description = "";
 
-    private String picture = "";
+    private byte[] picture;
     
     private String pictureContentType;
     
@@ -48,11 +48,11 @@ public class FeedCreateForm {
 		this.description = description;
 	}
 
-	public String getPicture() {
+	public byte[] getPicture() {
 		return picture;
 	}
 
-	public void setPicture(String picture) {
+	public void setPicture(byte[] picture) {
 		this.picture = picture;
 	}
 

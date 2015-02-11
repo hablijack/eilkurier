@@ -38,9 +38,9 @@ public class CategoryServiceImpl implements CategoryService {
 	}
     
 	@Override
-	public Optional<Category> getCategoryById(long id) {
+	public Category getCategoryById(long id) {
 		 LOGGER.debug("Getting user={}", id);
-	     return Optional.ofNullable(categoryRepository.findOne(id));
+	     return categoryRepository.findOne(id);
 	}
 
 	@Override
