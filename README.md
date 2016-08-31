@@ -1,5 +1,6 @@
 # Eilkurier
 ![heroku deployed](https://heroku-badge.herokuapp.com/?app=eilkurier)
+![travis build](https://travis-ci.org/hablijack/eilkurier.svg)
 
 C'mon you know that situation: 
 You are reading your favourite newspaper and the news you are looking for is not detectable because it's too young.
