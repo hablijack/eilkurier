@@ -34,7 +34,7 @@ public class FeedParser {
 	@Autowired
 	InfoRepository infoRepository = null;
 	
-	@Scheduled(cron="*/5 * * * * *")
+	@Scheduled(fixedRate=500000)
 	public void fetchInfos() throws IllegalArgumentException, FeedException, IOException {
 		LOGGER.debug("=====> Beginning Fetch Process");
 		List<Feed> allFeeds = feedRepository.findAll();

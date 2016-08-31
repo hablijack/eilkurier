@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import de.hablijack.eilkurier.domain.User;
+import de.hablijack.eilkurier.domain.EilkurierUser;
 import de.hablijack.eilkurier.form.UserCreateForm;
 import de.hablijack.eilkurier.repository.UserRepository;
 
@@ -26,20 +26,20 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<User> getUserById(long id) {
+    public Optional<EilkurierUser> getUserById(long id) {
         LOGGER.debug("Getting user={}", id);
         return Optional.ofNullable(userRepository.findOne(id));
     }
 
     @Override
-    public Optional<User> getUserByEmail(String email) {
+    public Optional<EilkurierUser> getUserByEmail(String email) {
         LOGGER.debug("Getting user by email={}", email.replaceFirst("@.*", "@***"));
         return userRepository.findOneByEmail(email);
     }
 
     @Override
-    public User create(UserCreateForm form) {
-        User user = new User();
+    public EilkurierUser create(UserCreateForm form) {
+        EilkurierUser user = new EilkurierUser();
         user.setEmail(form.getEmail());
         user.setPasswordHash(new BCryptPasswordEncoder().encode(form.getPassword()));
         user.setRole(form.getRole());

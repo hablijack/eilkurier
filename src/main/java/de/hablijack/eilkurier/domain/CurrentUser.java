@@ -6,14 +6,14 @@ public class CurrentUser extends org.springframework.security.core.userdetails.U
 
 	private static final long serialVersionUID = 4890898923483183209L;
 	
-	private User user;
+	private EilkurierUser user;
 
-    public CurrentUser(User user) {
+    public CurrentUser(EilkurierUser user) {
         super(user.getEmail(), user.getPasswordHash(), AuthorityUtils.createAuthorityList(user.getRole().toString()));
         this.user = user;
     }
 
-    public User getUser() {
+    public EilkurierUser getUser() {
         return user;
     }
 

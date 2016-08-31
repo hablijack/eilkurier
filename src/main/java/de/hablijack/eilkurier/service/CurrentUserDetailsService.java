@@ -9,7 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import de.hablijack.eilkurier.domain.CurrentUser;
-import de.hablijack.eilkurier.domain.User;
+import de.hablijack.eilkurier.domain.EilkurierUser;
 
 @Service
 public class CurrentUserDetailsService implements UserDetailsService {
@@ -25,7 +25,7 @@ public class CurrentUserDetailsService implements UserDetailsService {
     @Override
     public CurrentUser loadUserByUsername(String email) throws UsernameNotFoundException {
         LOGGER.debug("Authenticating user with email={}", email.replaceFirst("@.*", "@***"));
-        User user = userService.getUserByEmail(email)
+        EilkurierUser user = userService.getUserByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException(String.format("User with email=%s was not found", email)));
         return new CurrentUser(user);
     }

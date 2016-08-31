@@ -4,9 +4,9 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import de.hablijack.eilkurier.domain.User;
+import de.hablijack.eilkurier.domain.EilkurierUser;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<EilkurierUser, Long> {
 
-    Optional<User> findOneByEmail(String email);
+    Optional<EilkurierUser> findOneByEmail(String email);
 }
