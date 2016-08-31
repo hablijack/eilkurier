@@ -8,7 +8,7 @@
 	<version>0.0.1.SNAPSHOT</version>
 
 	<name>eilkurier.de</name>
-	<url>http://www.eilkurier.de</url>
+	<url>https://eilkurier.herokuapp.com/</url>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -44,9 +44,9 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>rome</groupId>
+			<groupId>com.rometools</groupId>
 			<artifactId>rome-fetcher</artifactId>
-			<version>1.0</version>
+			<version>1.7.0</version>
 		</dependency>
 	</dependencies>
 

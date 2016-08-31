@@ -85,12 +85,12 @@
 			                    		<h3>Zeit sparen</h3>
 			                    	</div>
 			                    	<div class="col-md-4">
-			                    		<img src="http://placehold.it/350x300" />
+			                    		<img src="https://placehold.it/350x300" />
 			                    	</div>
 			                    </div>
 			                    <div class="item">	
 			                    	<div class="col-md-4 col-md-offset-2">
-			                    		<img src="http://placehold.it/350x300" />
+			                    		<img src="https://placehold.it/350x300" />
 			                    	</div>
 			                    	<div class="col-md-4">
 			                    		<h3>Geldbeutel schonen</h3>
@@ -101,12 +101,12 @@
 			                    		<h3>Nerven schonen</h3>
 			                    	</div>
 			                    	<div class="col-md-4">
-			                    		<img src="http://placehold.it/350x300" />
+			                    		<img src="https://placehold.it/350x300" />
 			                    	</div>
 			                    </div>
 			                    <div class="item">
 			                    	<div class="col-md-4 col-md-offset-2">
-			                    		<img src="http://placehold.it/350x300" />
+			                    		<img src="https://placehold.it/350x300" />
 			                    	</div>
 			                    	<div class="col-md-4">
 			                    		<h3>Immer Topaktuell</h3>
@@ -117,7 +117,7 @@
 			                    		<h3>Modernes Medium</h3>
 			                    	</div>
 			                    	<div class="col-md-4">
-			                    		<img src="http://placehold.it/350x300" />
+			                    		<img src="https://placehold.it/350x300" />
 			                    	</div>
 			                    </div>
 			                </div>

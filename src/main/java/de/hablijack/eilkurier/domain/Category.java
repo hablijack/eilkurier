@@ -13,7 +13,7 @@ import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import org.apache.xerces.impl.dv.util.Base64;
+import com.rometools.rome.io.impl.Base64;
 
 @Entity
 @Table(name = "category")
@@ -85,6 +85,6 @@ public class Category {
 	}
 	
 	public String getBase64Picture() {
-		return Base64.encode(picture);
+		return Base64.encode(picture).toString();
 	}
 }
