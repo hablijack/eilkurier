@@ -46,7 +46,7 @@
 			    </div>
 				<div class="row">
 					<div class="col-md-4 hidden-xs login-logo">Login</div>
-	                <div class="col-md-8">
+	                <div class="col-md-8 loginform">
 						<form role="form" action="/login" method="post">
 			              	  <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 			                  <div class="form-group">

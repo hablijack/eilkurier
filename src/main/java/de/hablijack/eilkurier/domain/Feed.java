@@ -2,14 +2,12 @@ package de.hablijack.eilkurier.domain;
 
 import java.util.List;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -35,9 +33,8 @@ public class Feed {
     @Column(name = "description")
     private String description;
 
-    @Lob @Basic(fetch = FetchType.LAZY)
-    @Column(name = "picture", nullable = false, length=100000)
-    private byte[] picture;
+    @Column(name = "picture")
+    private String picture;
     
     @Column(name="picture_content_type")
     private String pictureContentType;
@@ -88,12 +85,12 @@ public class Feed {
 		this.description = description;
 	}
 
-	public byte[] getPicture() {
+	public String getPicture() {
 		return picture;
 	}
 
-	public void setPicture(byte[] picture) {
-		this.picture = picture;
+	public void setPicture(String string) {
+		this.picture = string;
 	}
 
 	public String getPictureContentType() {
@@ -102,9 +99,5 @@ public class Feed {
 
 	public void setPictureContentType(String pictureContentType) {
 		this.pictureContentType = pictureContentType;
-	}
-	
-	public String getBase64Picture() {
-		return Base64.encode(picture).toString();
 	}
 }

@@ -28,7 +28,7 @@
             <a class="page-scroll" href="#page-top"></a>
         </li>
         <li>
-            <a class="page-scroll" href="#about">Info</a>
+            <a class="page-scroll" href="/">Home</a>
         </li>
         <li>
             <a class="page-scroll" href="#services">Features</a>
@@ -54,7 +54,7 @@
             </a>
             <ul class="dropdown-menu">
             	<#if loggedIn>
-            		<@showUserInfo />
+            		<@showUserInfo currentUser.user />
             	<#else>
             		<@showRegistration />
             	</#if>
@@ -97,7 +97,7 @@
     </li>
 </#macro>
 
-<#macro showUserInfo>
+<#macro showUserInfo user>
 	<li>
         <div class="navbar-login">
             <div class="row">
@@ -107,8 +107,16 @@
                     </p>
                 </div>
                 <div class="col-lg-8">
-                    <p class="text-left"><strong>Nombre Apellido</strong></p>
-                    <p class="text-left small">correoElectronico@email.com</p>
+                    <p class="text-left">
+                        <strong>
+                        <#if user.name??>
+                            ${user.name}
+                        <#else>
+                            ${user.email}
+                        </#if>
+                    	</strong>
+                    </p>
+                    <p class="text-left small">${user.email}</p>
                     <p class="text-left">
                         
                     </p>

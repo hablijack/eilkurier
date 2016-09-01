@@ -17,11 +17,12 @@ public class ReaderController {
 	public void read() {
 		boolean ok = false;
         try {
-            // URL feedUrl = new URL( "http://golem.de.dynamic.feedsportal.com/pf/578068/http://rss.golem.de/rss.php?feed=RSS2.0" );
-        	 URL feedUrl = new URL( "http://rss.bild.de/bild.xml" );
+            URL feedUrl = new URL( "http://rss.golem.de/rss.php?feed=RSS2.0" );
+        	 //URL feedUrl = new URL( "http://rss.bild.de/bild.xml" );
         	
             SyndFeedInput input = new SyndFeedInput();
             SyndFeed feed = input.build(new XmlReader(feedUrl));
+            
             for (Object entry : feed.getEntries()) {
             	SyndEntryImpl currentEntry = (SyndEntryImpl) entry;
             	System.out.println("------------------------");

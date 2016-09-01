@@ -22,18 +22,6 @@
 					        <label for="url">URL:</label>
 					        <input type="text" name="url" id="url" class="form-control" value="${form.url}" required autofocus/>
 					    </div>
-					   <div class="form-group">
-					        <label for="name">Name:</label>
-					        <input type="text" name="name" class="form-control" id="name" value="${form.name}" required/>
-					    </div>
-					    <div class="form-group">
-					        <label for="description">Beschreibung:</label>
-					        <input type="text" name="description" class="form-control" id="description" value="${form.description}"/>
-					    </div>
-					    <div class="form-group">
-					        <label for="picture">Bild / Logo:</label>
-					        <input type="file" name="picture" class="form-control" id="picture"/>
-					    </div>
 					    <button class="btn btn-primary" type="submit">Speichern</button>
 					</form>
 				</div>

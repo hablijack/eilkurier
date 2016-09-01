@@ -1,11 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Brawler);
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display);
 
 body {
     width: 100%;
     height: 100%;
-    font-family: 'Brawler', serif;
+    font-family: 'Playfair Display', serif;
     color: black;
-    padding-top: 120px;
+    padding-top: 130px;
+    background-color: #f9f7f1;
 }
 
 html {
@@ -15,7 +17,27 @@ html {
 
 h1, h2, h3, h4 {
 	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
 }
+
+h1::before {
+    border-top: 1px solid #2f2f2f;
+    content: "";
+    display: block;
+    height: 7px;
+    margin: 0 auto;
+    width: 500px;
+}
+h1::after {
+    border-bottom: 1px solid #2f2f2f;
+    content: "";
+    display: block;
+    height: 10px;
+    margin: 0 auto;
+    width: 300px;
+}
+
 
 @media(min-width:767px) {
     .navbar-eilkurier .container {
@@ -29,7 +51,6 @@ h1, h2, h3, h4 {
         padding: 0;
     }
 }
-
 
 textarea:focus,
 input[type="text"]:focus,
@@ -137,9 +158,9 @@ a {
 }
 .navbar-slogan {
 	background-color: white; 
-	font-family: "Lucida Grande",Verdana,Arial,Helvetica,sans-serif; 
+	font-family: 'Playfair Display', serif;; 
 	color: #6B2F1B; 
 	font-weight: bold;
-	line-height: 16px
+	line-height: 30px;
 }
 

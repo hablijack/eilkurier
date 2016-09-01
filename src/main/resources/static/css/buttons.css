@@ -4,8 +4,10 @@
 	color: white;
 	font-family: "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 .btn-primary:hover, .btn-primary:active {
 	background-color: #8F2F11;
+	text-decoration: none;
 }

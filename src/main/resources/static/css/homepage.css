@@ -47,6 +47,11 @@
 	padding: 20px;
 	float: left;
 }
+
+#homepage-content .loginform {
+    background-color: white;	
+}
+
 #homepage-content .login .login-logo {
 	background-color: #6B2F1B;
 	color: white;

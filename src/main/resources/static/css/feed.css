@@ -1,0 +1,38 @@
+.feedContainer {
+	border: 1px solid black;
+	color: black;
+	text-align: center;
+	padding: 20px;
+	background-color: white;
+	text-decoration: none;
+}
+
+.feedContainer:hover {
+    text-decoration: none;
+}
+
+.feedContainer h3 {
+	padding: 0;
+	margin: 0;
+	margin-bottom: 10px;
+	color: black;
+	text-transform: uppercase;
+}
+
+.feedContainer img {
+	max-width: 200px;
+	border: 3px solid black;
+}
+
+h1.feedHeadline {
+	text-align: center;
+}
+
+#feedview .container {
+	border: 1px solid black;
+	background-color: white;
+}
+
+#feedview .btn {
+	margin-top: 50px;
+}

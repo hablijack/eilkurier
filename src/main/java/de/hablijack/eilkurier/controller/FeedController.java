@@ -1,6 +1,8 @@
 package de.hablijack.eilkurier.controller;
 
 
+import java.io.IOException;
+
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -19,6 +21,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.rometools.rome.io.FeedException;
 
 import de.hablijack.eilkurier.domain.validator.FeedCreateFormValidator;
 import de.hablijack.eilkurier.form.FeedCreateForm;
@@ -64,24 +68,18 @@ public class FeedController {
     }
 
     @RequestMapping(value = "/feed/create", method = RequestMethod.POST)
-    public String handleUserCreateForm(
-    	@Valid @ModelAttribute("form") FeedCreateForm form, 
-    	BindingResult bindingResult) {
-        LOGGER.debug("Processing feed create form={}, bindingResult={}", form, bindingResult);
-        if (bindingResult.hasErrors()) {
-            // failed validation
-            return "feed_edit";
-        }
+    public String handleUserCreateForm(@Valid @ModelAttribute("form") FeedCreateForm form, BindingResult bindingResult) {
         try {
             feedService.create(form);
         } catch (DataIntegrityViolationException e) {
-            // probably email already exists - very rare case when multiple admins are adding same user
-            // at the same time and form validation has passed for more than one of them.
             LOGGER.warn("Exception occurred when trying to save the feed, assuming duplicate email", e);
             bindingResult.reject("name.exists", "Email already exists");
             return "feed_edit";
-        }
-        // ok, redirect
+        } catch (IllegalArgumentException | FeedException | IOException e) {
+        	LOGGER.warn("Exception occured when parsing URL: ", e);
+            bindingResult.reject("url.failure", "URL invalid");
+            return "feed_edit";
+		}
         return "redirect:/feeds";
     }
 
