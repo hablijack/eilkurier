@@ -10,7 +10,9 @@
 	                </div>
 	            </div>
 	            <div class="row">
-	            	<div class="col-md-5"></div>
+	            	<div class="col-md-5">
+	            	  <img class="img-responsive newspaper center-block" src="/img/zeitung.png">
+	            	</div>
 	            	<div class="col-md-7 info-text text-justify">
 	                    <p>
 	                    	Kennst Du das? Du sitzt Sonntag Morgens am Frühstückstisch, 
