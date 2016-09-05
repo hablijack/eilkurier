@@ -4,8 +4,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
+                    <#if form.url??>
+                        <h1>Nachrichtenquelle ändern</h1> 
+                    <#else>
+                        <h1>Nachrichtenquelle hinzufügen</h1> 
+                    </#if>
 
-					<h1>Feed registrieren</h1> 
 					
 					<form enctype="multipart/form-data" role="form" name="form" action="/feed/create" method="post">
 						<@spring.bind "form" />

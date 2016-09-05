@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-					<h1 class="feedHeadline">Feeds</h1>
+					<h1 class="feedHeadline">Quellen</h1>
 				</div>
 			</div>
 			<div class="row">

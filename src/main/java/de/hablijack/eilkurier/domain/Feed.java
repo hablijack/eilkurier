@@ -12,9 +12,6 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import com.rometools.rome.io.impl.Base64;
-
-
 @Entity
 @Table(name = "feed")
 public class Feed {

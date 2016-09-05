@@ -28,7 +28,7 @@
             <a class="page-scroll" href="#page-top"></a>
         </li>
         <li>
-            <a class="page-scroll" href="/">Home</a>
+            <a class="page-scroll" href="/">Start</a>
         </li>
         <li>
             <a class="page-scroll" href="#services">Features</a>
