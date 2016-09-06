@@ -1,9 +1,24 @@
 package de.hablijack.eilkurier.domain;
 
-import javax.persistence.*;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+import lombok.Data;
 
 @Entity
 @Table(name = "eilkurieruser")
+@Data
 public class EilkurierUser {
 
     @Id
@@ -21,41 +36,9 @@ public class EilkurierUser {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    public Long getId() {
-        return id;
-    }
+    @ManyToMany(fetch = FetchType.LAZY, mappedBy = "users")
+    private List<Feed> feeds;
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPasswordHash() {
-        return passwordHash;
-    }
-
-    public void setPasswordHash(String passwordHash) {
-        this.passwordHash = passwordHash;
-    }
-
-    public Role getRole() {
-        return role;
-    }
-
-    public void setRole(Role role) {
-        this.role = role;
-    }
-
-    @Override
-    public String toString() {
-        return "Eilkurier-User{" +
-                "id=" + id +
-                ", email='" + email.replaceFirst("@.*", "@***") +
-                ", passwordHash='" + passwordHash.substring(0, 10) +
-                ", role=" + role +
-                '}';
-    }
+    @OneToMany
+    private List<Category> categories;
 }

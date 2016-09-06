@@ -14,8 +14,11 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import lombok.Data;
+
 @Entity
 @Table(name = "info")
+@Data
 public class Info {
 
     @Id
@@ -33,62 +36,10 @@ public class Info {
     @Column(name = "author", nullable = false)
     private String author;
 
-    @Lob 
+    @Lob
     @Column(name = "message", nullable = false)
     private String message;
 
-    @ManyToOne(fetch=FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     private Feed feed;
-
-	public Long getId() {
-		return id;
-	}
-
-	public Date getTimestamp() {
-		return timestamp;
-	}
-
-
-	public void setTimestamp(Date timestamp) {
-		this.timestamp = timestamp;
-	}
-
-
-	public String getTitle() {
-		return title;
-	}
-
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-
-	public String getAuthor() {
-		return author;
-	}
-
-
-	public void setAuthor(String author) {
-		this.author = author;
-	}
-
-
-	public String getMessage() {
-		return message;
-	}
-
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public Feed getFeed() {
-		return feed;
-	}
-
-	public void setFeed(Feed feed) {
-		this.feed = feed;
-	}
-    
 }

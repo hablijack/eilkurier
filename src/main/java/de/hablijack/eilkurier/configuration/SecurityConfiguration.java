@@ -18,39 +18,37 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
  
     @Autowired
     private UserDetailsService userDetailsService;
-    
-	@Override
+
+    @Override
     public void configure(WebSecurity web) throws Exception {
        web.ignoring().antMatchers("/css/**", "/js/**", "/fonts/**", "/img/**");
     }
-	
-	 @Override
-	protected void configure(HttpSecurity http) throws Exception {
-	    http.authorizeRequests()
-	            .antMatchers("/", "/public/**").permitAll()
-	            .antMatchers("/users/**").permitAll()
-	            .and()
-	            .formLogin()
-	            .loginPage("/login")
-	            .failureUrl("/login?error")
-	            .defaultSuccessUrl("/yournews")
-	            .usernameParameter("email")
-	            .permitAll()
-	            .and()
-	            .logout()
-	            .logoutUrl("/logout")
-	            .deleteCookies("remember-me")
-	            .logoutSuccessUrl("/")
-	            .permitAll()
-	            .and()
-	            .rememberMe();
-	}
-	
-	@Override
-	public void configure(AuthenticationManagerBuilder auth) throws Exception {
-	    auth
-	            .userDetailsService(userDetailsService)
-	            .passwordEncoder(new BCryptPasswordEncoder());
-	}
-    
+
+     @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("/").permitAll()
+                .antMatchers("/user/create").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .loginPage("/login")
+                .failureUrl("/login?error")
+                .defaultSuccessUrl("/yournews")
+                .usernameParameter("email")
+                .permitAll()
+                .and()
+                .logout()
+                .logoutUrl("/logout")
+                .deleteCookies("remember-me")
+                .logoutSuccessUrl("/")
+                .permitAll()
+                .and()
+                .rememberMe();
+    }
+
+    @Override
+    public void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userDetailsService).passwordEncoder(new BCryptPasswordEncoder());
+    }
 }

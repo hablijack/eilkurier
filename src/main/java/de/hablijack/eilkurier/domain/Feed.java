@@ -12,8 +12,11 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import lombok.Data;
+
 @Entity
 @Table(name = "feed")
+@Data
 public class Feed {
 
     @Id
@@ -32,69 +35,16 @@ public class Feed {
 
     @Column(name = "picture")
     private String picture;
-    
-    @Column(name="picture_content_type")
+
+    @Column(name = "picture_content_type")
     private String pictureContentType;
 
-    @ManyToMany(fetch=FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY)
     private List<Category> categories;
-    
-	@OneToMany()
+
+    @OneToMany()
     private List<Info> infos;
-    
-	public List<Info> getInfos() {
-		return infos;
-	}
 
-	public List<Category> getCategories() {
-		return categories;
-	}
-
-	public void setCategories(List<Category> categories) {
-		this.categories = categories;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public String getUrl() {
-		return url;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getPicture() {
-		return picture;
-	}
-
-	public void setPicture(String string) {
-		this.picture = string;
-	}
-
-	public String getPictureContentType() {
-		return pictureContentType;
-	}
-
-	public void setPictureContentType(String pictureContentType) {
-		this.pictureContentType = pictureContentType;
-	}
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<EilkurierUser> users;
 }

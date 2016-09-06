@@ -1,5 +1,5 @@
 <@layout.basic>
-	<link href="css/register.css" rel="stylesheet">
+	<link href="/css/register.css" rel="stylesheet">
 	<section id="register" class="page-content">
         <div class="container">
             <div class="row">
