@@ -33,9 +33,9 @@
 }
 
 span.round-tab {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
+    //width: 70px;
+    //height: 70px;
+    //line-height: 70px;
     display: inline-block;
     border-radius: 100px;
     background: #f9f7f1;
@@ -91,8 +91,8 @@ span.round-tab:hover {
 }
 
 .wizard .nav-tabs > li a {
-    width: 70px;
-    height: 70px;
+    width: 160px;
+    height: 40px;
     margin: 20px auto;
     border-radius: 100%;
     padding: 0;

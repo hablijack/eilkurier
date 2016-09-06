@@ -20,6 +20,7 @@
                                     <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
                                         <span class="round-tab">
                                             <i class="glyphicon glyphicon-folder-open"></i>
+                                            Interessen
                                         </span>
                                     </a>
                                 </li>
@@ -28,6 +29,7 @@
                                     <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
                                         <span class="round-tab">
                                             <i class="glyphicon glyphicon-pencil"></i>
+                                            Quellen
                                         </span>
                                     </a>
                                 </li>
@@ -35,6 +37,7 @@
                                     <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
                                         <span class="round-tab">
                                             <i class="glyphicon glyphicon-picture"></i>
+                                            Fertig!
                                         </span>
                                     </a>
                                 </li>
@@ -52,8 +55,11 @@
                         <form role="form">
                             <div class="tab-content">
                                 <div class="tab-pane active" role="tabpanel" id="step1">
-                                    <h3>Step 1</h3>
-                                    <p>This is step 1</p>
+                                    <h2>Schritt 1: Deine Interessen</h2>
+                                    <p>
+                                        Als Erstes solltest Du dir überlegen, welche Art von Nachrichten Dich interessieren. 
+                                        Du kannst hier schon mal ein
+                                    </p>
                                     <ul class="list-inline pull-right">
                                         <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
                                     </ul>
@@ -85,16 +91,6 @@
                     </div>
                 </section>
             </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <section id="navigation">
-                        <a href="/categories">Nachrichten Kategorien</a><br/>
-                        <a href="feeds">registrierte Nachrichten-Quellen</a>
-                    </section>
-                </div>
-            </div>
-            
         </div>
 	</section>
 </@layout.basic>
