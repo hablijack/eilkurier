@@ -24,7 +24,7 @@ import de.hablijack.eilkurier.form.CategoryCreateForm;
 import de.hablijack.eilkurier.service.CategoryService;
 
 @Controller
-public class CategoryController {
+class CategoryController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CategoryController.class);
     @Autowired

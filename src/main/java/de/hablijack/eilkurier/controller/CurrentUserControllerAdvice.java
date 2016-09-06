@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import de.hablijack.eilkurier.domain.CurrentUser;
 
 @ControllerAdvice
-public class CurrentUserControllerAdvice {
+class CurrentUserControllerAdvice {
 
     @ModelAttribute("currentUser")
     public CurrentUser getCurrentUser(Authentication authentication) {

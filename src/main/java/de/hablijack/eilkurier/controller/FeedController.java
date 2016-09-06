@@ -29,7 +29,7 @@ import de.hablijack.eilkurier.form.FeedCreateForm;
 import de.hablijack.eilkurier.service.FeedService;
 
 @Controller
-public class FeedController {
+class FeedController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FeedController.class);
     @Autowired

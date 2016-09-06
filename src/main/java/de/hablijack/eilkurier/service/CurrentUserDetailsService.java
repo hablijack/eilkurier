@@ -12,13 +12,13 @@ import de.hablijack.eilkurier.domain.CurrentUser;
 import de.hablijack.eilkurier.domain.EilkurierUser;
 
 @Service
-public class CurrentUserDetailsService implements UserDetailsService {
+class CurrentUserDetailsService implements UserDetailsService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CurrentUserDetailsService.class);
     private final UserService userService;
 
     @Autowired
-    public CurrentUserDetailsService(UserService userService) {
+    private CurrentUserDetailsService(UserService userService) {
         this.userService = userService;
     }
 

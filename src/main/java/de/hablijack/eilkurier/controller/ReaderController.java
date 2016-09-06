@@ -11,7 +11,7 @@ import com.rometools.rome.io.SyndFeedInput;
 import com.rometools.rome.io.XmlReader;
 
 @Controller
-public class ReaderController {
+class ReaderController {
  
 	@RequestMapping("/rss.html")
 	public void read() {

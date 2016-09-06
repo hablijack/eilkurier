@@ -1,7 +1,9 @@
-package de.hablijack.eilkurier.acceptance;
+package de.hablijack.eilkurier.e2e;
 
+import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.open;
 
 import org.junit.BeforeClass;
@@ -12,16 +14,18 @@ import com.codeborne.selenide.WebDriverRunner;
 
 import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 
-public class FirstTest {
+public class HomepageTest {
+
     @BeforeClass
-    public static void setupClass() {
+    public static void initPhantomJSWebdriver() {
         PhantomJsDriverManager.getInstance().setup();
         WebDriverRunner.setWebDriver(new PhantomJSDriver());
     }
 
     @Test
-    public void search_selenide_in_google() {
+    public void check_navigation_presence() {
         open("http://localhost:8080");
-        $("#brand img").should(exist);
+        $("nav.navbar").should(exist);
+        $$("nav.navbar ul li").shouldHave( sizeGreaterThan(2) );
     }
 }

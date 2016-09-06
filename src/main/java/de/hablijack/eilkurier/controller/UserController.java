@@ -21,7 +21,7 @@ import de.hablijack.eilkurier.form.UserCreateForm;
 import de.hablijack.eilkurier.service.UserService;
 
 @Controller
-public class UserController {
+class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
     @Autowired

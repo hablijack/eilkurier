@@ -7,7 +7,7 @@
 	<artifactId>eilkurier</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>eilkurier.de</name>
+	<name>eilkurier</name>
 	<url>https://eilkurier.herokuapp.com/</url>
 
 	<parent>
@@ -99,8 +99,6 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
-
 </project>

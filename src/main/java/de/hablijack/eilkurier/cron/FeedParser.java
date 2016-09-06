@@ -24,14 +24,16 @@ import de.hablijack.eilkurier.repository.InfoRepository;
 
 @Component
 @EnableScheduling
-public class FeedParser {
+class FeedParser {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(FeedParser.class);
 
 	@Autowired
+	private final
 	FeedRepository feedRepository = null;
 
 	@Autowired
+	private final
 	InfoRepository infoRepository = null;
 	
 	@Scheduled(fixedRate=500000)

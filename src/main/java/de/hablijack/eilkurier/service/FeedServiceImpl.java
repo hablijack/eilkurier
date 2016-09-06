@@ -2,7 +2,6 @@ package de.hablijack.eilkurier.service;
 
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,7 +28,7 @@ public class FeedServiceImpl implements FeedService {
     private RSSParserService rssParserService;
 
     @Override
-    public Feed create(FeedCreateForm form) throws MalformedURLException, IllegalArgumentException, FeedException, IOException {
+    public Feed create(FeedCreateForm form) throws IllegalArgumentException, FeedException, IOException {
     	SyndFeed rssFeed = rssParserService.parse(form.getUrl());
     	
         Feed feed = new Feed();

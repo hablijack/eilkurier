@@ -15,8 +15,7 @@ public class RSSParserServiceImpl implements RSSParserService {
     public SyndFeed parse(String url) throws IllegalArgumentException, FeedException, IOException {
         URL feedUrl = new URL(url);
         SyndFeedInput input = new SyndFeedInput();
-        SyndFeed rss = input.build(new XmlReader(feedUrl));
-        return rss;
+        return input.build(new XmlReader(feedUrl));
     }
 
 }

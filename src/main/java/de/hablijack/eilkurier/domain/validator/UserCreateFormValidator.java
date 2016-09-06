@@ -18,7 +18,7 @@ public class UserCreateFormValidator implements Validator {
     private final UserService userService;
 
     @Autowired
-    public UserCreateFormValidator(UserService userService) {
+    private UserCreateFormValidator(UserService userService) {
         this.userService = userService;
     }
 

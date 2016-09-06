@@ -1,6 +1,5 @@
 package de.hablijack.eilkurier.service;
 
-
 import java.util.Optional;
 
 import org.slf4j.Logger;
@@ -17,11 +16,10 @@ import de.hablijack.eilkurier.repository.UserRepository;
 public class UserServiceImpl implements UserService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
-    
     private final UserRepository userRepository;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository) {
+    private UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -45,5 +43,4 @@ public class UserServiceImpl implements UserService {
         user.setRole(form.getRole());
         return userRepository.save(user);
     }
-
 }
