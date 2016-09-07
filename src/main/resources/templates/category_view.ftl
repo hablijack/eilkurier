@@ -7,10 +7,7 @@
 					<h1>${category.name}</h1>
 					<p>${category.description}</p>
 				</div>
-                <div class="col-md-6">
-                	<img class="img-responsive pull-left" src="data:image/png;base64,${category.base64Picture}" />
-                </div>
 			</div>
 		</div>
-	</section>				
+	</section>
 </@layout.basic>

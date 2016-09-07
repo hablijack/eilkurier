@@ -21,10 +21,35 @@ In the future it'll be possible to export the newspaper as pdf or jpg and share 
 
 ## Used Technology
 * Spring-Boot
+* Spring-Security
 * Freemarker
 * Maven
-* Spring-Security
-* Twitter Bootstrap
+* Rome Fetcher
+* Bootstrap 3
 * JQuery
 * Tomcat
-* MySQL
+* PostgreSQL
+* H2DB
+* <a href="https://projectlombok.org/" target="_blank">Project Lombok</a>
+* Selenide
+* Webdrivermanager
+* PhantomJS
+
+## Installation
+KISS principle: Keep It Short n Simple
+#### Step1: Checkout
+> git clone https://github.com/hablijack/eilkurier.git
+
+#### Step2: Step into
+> cd eilkurier
+
+#### Step3: Import in your favourite IDE
+Be sure to <a href="https://projectlombok.org/download.html" target="_blank">import LOMBOK correctly</a>, otherwise your IDE will not compile!
+
+#### Run Spring-Boot maven goal
+> mvn spring-boot:run -Dspring.profiles.active=development
+Pay attention to the "profiles.active" parameter for development profile => It points you to a local INMEMORY! database.
+
+#### Open browser
+Try to open your browser at http://localhost:8080. There should be the homepage of "eilkurier". 
+You can (in development profile) login for test purposes by using the user "root@eilkurier.com" and the password "test".

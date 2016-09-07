@@ -27,7 +27,6 @@ public class CategoryServiceImpl implements CategoryService {
         
         category.setName(form.getName());
         category.setDescription(form.getDescription());
-        category.setPicture(form.getPicture());
         return categoryRepository.save(category);
     }
 

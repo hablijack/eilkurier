@@ -1,5 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Brawler);
-
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display);
 
 body {
@@ -165,8 +164,17 @@ a {
 
 .navbar-slogan {
 	background-color: white;
-	font-family: 'Playfair Display', serif;;
+	font-family: 'Playfair Display', serif;
 	color: #6B2F1B;
 	font-weight: bold;
 	line-height: 30px;
+}
+
+#footer {
+	margin-top: 60px;
+	color: white;
+	font-family: 'Brawler', serif;
+}
+#footer a {
+	color: white;
 }

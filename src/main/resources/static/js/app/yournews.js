@@ -25,6 +25,8 @@ $(document).ready(function () {
         prevTab($active);
 
     });
+    
+    dragula([document.querySelector('#usercategories'), document.querySelector('#categories')]);
 });
 
 function nextTab(elem) {

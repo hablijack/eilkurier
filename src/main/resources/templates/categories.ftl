@@ -11,15 +11,10 @@
 			<div class="row product-chooser">
 				<#list categories as category>
 					<a href="/category/${category.id}">
-						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				    		<div class="product-chooser-item selected">
-				    			<img class="img-responsive pull-left" src="data:image/png;base64,${category.base64Picture}" />
-				    			<h4>${category.name}</h4>
-				    		</div>
-				    	</div>
+				        <h4>${category.description}</h4>
 				   	</a>
 				</#list>
 			</div>
 	    </div>
-	</section>				
+	</section>
 </@layout.basic>

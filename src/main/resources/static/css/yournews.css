@@ -1,139 +1,192 @@
 .wizard {
-    margin: 20px auto;
+	margin: 20px auto;
 }
 
-    .wizard .nav-tabs {
-        position: relative;
-        margin: 40px auto;
-        margin-bottom: 0;
-        border-bottom-color: #e0e0e0;
-    }
+.wizard h1 {
+	margin-top: 0px;
+}
 
-    .wizard > div.wizard-inner {
-        position: relative;
-    }
+.wizard h1::before, .wizard h1::after {
+	border-top: none;
+	border-bottom: none;
+}
+
+.wizard h2 {
+	text-transform: none;
+	font-weight: normal;
+}
+
+.wizard h2::before {
+	border-top: 1px solid #2f2f2f;
+	content: "";
+	display: block;
+	margin: 0 auto;
+	width: 500px;
+}
+
+.wizard h2::after {
+	border-bottom: 1px solid #2f2f2f;
+	content: "";
+	display: block;
+	height: 10px;
+	margin: 0 auto;
+	width: 300px;
+}
+
+.wizard .nav-tabs {
+	position: relative;
+	margin-bottom: 0;
+}
+
+.wizard>div.wizard-inner {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
 
 .connecting-line {
-    height: 2px;
-    background: black;
-    position: absolute;
-    width: 80%;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 50%;
-    z-index: 1;
+	height: 2px;
+	background: black;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 35%;
+	z-index: 1;
 }
 
-.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
-    color: black;
-    cursor: default;
-    border: 0;
-    border-bottom-color: transparent;
+.wizard .nav-tabs>li.active>a, .wizard .nav-tabs>li.active>a:hover,
+	.wizard .nav-tabs>li.active>a:focus {
+	color: black;
+	cursor: default;
+	border: 0;
+	border-bottom-color: transparent;
+	background: transparent;
 }
 
 span.round-tab {
-    //width: 70px;
-    //height: 70px;
-    //line-height: 70px;
-    display: inline-block;
-    border-radius: 100px;
-    background: #f9f7f1;
-    border: 2px solid black;
-    z-index: 2;
-    position: absolute;
-    left: 0;
-    text-align: center;
-    font-size: 25px;
+	display: inline-block;
+	background: #f9f7f1;
+	border: 2px solid black;
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	text-align: center;
+	font-size: 25px;
+	padding: 3px 20px;
 }
-span.round-tab i{
-    color:#b7b7b7;
+
+span.round-tab i {
+	color: #777;
 }
+
 .wizard li.active span.round-tab {
-    background: white;
-    border: 2px solid #6b2f1b;
-    
+	border: 2px solid black;
+	background-color: white;
+	color: #6b2f1b;
+	font-weight: bold;
 }
-.wizard li.active span.round-tab i{
-    color: #6b2f1b;
+
+.wizard li.active span.round-tab i {
+	color: #6b2f1b;
+	margin-right: 10px;
 }
 
 span.round-tab:hover {
-    color: #333;
-    border: 2px solid #333;
+	color: #333;
+	border: 2px solid #333;
 }
 
-.wizard .nav-tabs > li {
-    width: 25%;
+.wizard .nav-tabs>li {
+	width: 30%;
 }
 
 .wizard li:after {
-    content: " ";
-    position: absolute;
-    left: 46%;
-    opacity: 0;
-    margin: 0 auto;
-    bottom: 0px;
-    border: 5px solid transparent;
-    border-bottom-color: #6b2f1b;
-    transition: 0.1s ease-in-out;
+	content: " ";
+	position: absolute;
+	left: 36%;
+	opacity: 0;
+	margin: 0 auto;
+	bottom: 0px;
+	border: 10px solid transparent;
+	border-bottom-color: white;
+   -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .wizard li.active:after {
-    content: " ";
-    position: absolute;
-    left: 46%;
-    opacity: 1;
-    margin: 0 auto;
-    bottom: 0px;
-    border: 10px solid transparent;
-    border-bottom-color: #6b2f1b;
+	content: " ";
+	position: absolute;
+	left: 44%;
+	opacity: 1;
+	margin: 0 auto;
+	bottom: 0px;
+	border: 30px solid transparent;
+	border-bottom-color: white;
 }
 
-.wizard .nav-tabs > li a {
-    width: 160px;
-    height: 40px;
-    margin: 20px auto;
-    border-radius: 100%;
-    padding: 0;
+.wizard .nav-tabs>li a {
+	width: 220px;;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 35px; 
+	border-radius : 100%;
+	padding: 0;
+	border-radius: 100%;
+	background: transparent;
 }
 
-    .wizard .nav-tabs > li a:hover {
-        background: transparent;
-    }
+.wizard .nav-tabs>li a:hover {
+	background: transparent;
+}
 
 .wizard .tab-pane {
-    position: relative;
-    padding-top: 50px;
+	position: relative;
 }
 
 .wizard h3 {
-    margin-top: 0;
+	margin-top: 0;
 }
 
-@media( max-width : 585px ) {
+.wizard form {
+	   background-color: white;
+}
 
-    .wizard {
-        width: 90%;
-        height: auto !important;
-    }
+.categorycontainer {
+	    background-color: rgba(255, 255, 255, 0.2);
+    display: table-cell;
+    width: 50%;
+    position: relative;
 
-    span.round-tab {
-        font-size: 16px;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-    }
+}
 
-    .wizard .nav-tabs > li a {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-    }
 
-    .wizard li.active:after {
-        content: " ";
-        position: absolute;
-        left: 35%;
-    }
+.categorycontainer div {
+        cursor: grab;	
+}
+
+@media ( max-width : 585px ) {
+	.wizard {
+		width: 90%;
+		height: auto !important;
+	}
+	span.round-tab {
+		font-size: 16px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+	.wizard .nav-tabs>li a {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+	.wizard li.active:after {
+		content: " ";
+		position: absolute;
+		left: 35%;
+	}
 }

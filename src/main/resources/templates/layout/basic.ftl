@@ -17,8 +17,8 @@
 			${template}
 		</div>
 
+        <@layout.pagefooter />
 		<@layout.js controllerId=controllerId />
-
 	</body>
 	
 </html></@compress>
