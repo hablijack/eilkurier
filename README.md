@@ -48,6 +48,7 @@ Be sure to <a href="https://projectlombok.org/download.html" target="_blank">imp
 
 #### Run Spring-Boot maven goal
 > mvn spring-boot:run -Dspring.profiles.active=development
+
 Pay attention to the "profiles.active" parameter for development profile => It points you to a local INMEMORY! database.
 
 #### Open browser
