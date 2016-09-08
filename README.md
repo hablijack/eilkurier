@@ -50,6 +50,9 @@ Be sure to <a href="https://projectlombok.org/download.html" target="_blank">imp
 > mvn spring-boot:run -Dspring.profiles.active=development
 
 Pay attention to the "profiles.active" parameter for development profile => It points you to a local INMEMORY! database.
+You can also use your IDE and the <a href="http://docs.spring.io/spring-boot/docs/current/maven-plugin/run-mojo.html">Maven Spring-Boot Plugin</a> to run the project:
+
+> Run -> Run Configurations -> Maven Build -> New -> Goal: "spring-boot:run -Dspring.profiles.active=development" -> Run
 
 #### Open browser
 Try to open your browser at http://localhost:8080. There should be the homepage of "eilkurier". 
