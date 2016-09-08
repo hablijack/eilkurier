@@ -1,6 +1,7 @@
-<img src="https://github.com/hablijack/eilkurier/blob/master/src/main/resources/static/img/logo_header_black.png" width="100px">
-
-# Eilkurier
+<h1> 
+<img src="https://github.com/hablijack/eilkurier/blob/master/src/main/resources/static/img/logo_header_black.png" width="60px">
+Eilkurier
+</h1>
 
 ![heroku deployed](https://heroku-badge.herokuapp.com/?app=eilkurier)
 ![travis build](https://travis-ci.org/hablijack/eilkurier.svg)
