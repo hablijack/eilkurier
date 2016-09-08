@@ -16,14 +16,7 @@
                                         Du kannst hier schon mal ein
                                     </p>
                                     
-                                    <div id="wrapper">
-                                        <div class="categorycontainer container" id="usercategories"></div>
-                                        <div class="categorycontainer container" id="categories">
-                                          <#list categories as category>
-                                              <div>${category.description}</div>
-                                          </#list>
-                                        </div>
-                                    </div>
+                                    <@dragndropcategory/>
                                     
                                     <ul class="list-inline pull-right">
                                         <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
@@ -54,37 +47,49 @@
 	</section>
 </@layout.basic>
 
+<#macro dragndropcategory>
+    <div id="wrapper">
+        <ul class="categorycontainer container" id="usercategories"></ul>
+        <ul class="categorycontainer container" id="categories">
+          <#list categories as category>
+              <li>${category.description}</li>
+          </#list>
+        </ul>
+    </div>
+</#macro>
+
 <#macro wizzard>
- <div class="wizard-inner">
-                            <div class="connecting-line"></div>
-                            <ul class="nav nav-tabs" role="tablist">
+    <div class="wizard-inner">
+        <div class="connecting-line"></div>
+        <ul class="nav nav-tabs" role="tablist">
+    
+            <li role="presentation" class="active">
+                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab">
+                    <span class="round-tab">
+                        <i class="glyphicon glyphicon-folder-open"></i>
+                        Interessen
+                    </span>
+                </a>
+            </li>
             
-                                <li role="presentation" class="active">
-                                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab">
-                                        <span class="round-tab">
-                                            <i class="glyphicon glyphicon-folder-open"></i>
-                                            Interessen
-                                        </span>
-                                    </a>
-                                </li>
+            <li role="presentation" class="disabled">
+                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab">
+                    <span class="round-tab">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                        Quellen
+                    </span>
+                </a>
+            </li>
             
-                                <li role="presentation" class="disabled">
-                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab">
-                                        <span class="round-tab">
-                                            <i class="glyphicon glyphicon-pencil"></i>
-                                            Quellen
-                                        </span>
-                                    </a>
-                                </li>
-                                <li role="presentation" class="disabled">
-                                    <a href="#complete" data-toggle="tab" aria-controls="step3" role="tab">
-                                        <span class="round-tab">
-                                            <i class="glyphicon glyphicon-ok"></i>
-                                            Fertig!
-                                        </span>
-                                    </a>
-                                </li>
+            <li role="presentation" class="disabled">
+                <a href="#complete" data-toggle="tab" aria-controls="step3" role="tab">
+                    <span class="round-tab">
+                        <i class="glyphicon glyphicon-ok"></i>
+                        Fertig!
+                    </span>
+                </a>
+            </li>
        
-                            </ul>
-                        </div>
+        </ul>
+    </div>
 </#macro>

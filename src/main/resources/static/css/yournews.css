@@ -164,9 +164,58 @@ span.round-tab:hover {
 }
 
 
-.categorycontainer div {
+.categorycontainer li {
         cursor: grab;	
+        list-style: none;
 }
+
+
+.wrapper {
+  display: table;
+}
+.categorycontainer {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 400px;
+  height: 300px;
+  overflow: scroll;
+  float: left;
+  background-color: #f9f7f1;
+  padding: 8px;
+  overflow-x: hidden;
+  font-family: "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
+  margin-right: 20px;
+  border: 1px solid black;
+}
+.categorycontainer-child(odd) {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.categorycontainer > li,
+.gu-mirror {
+  margin: 10px;
+  padding: 10px;
+  background-color: #6b2f1b;
+  color: white;
+  transition: opacity 0.4s ease-in-out;
+  list-style: none;
+}
+.categorycontainer > li {
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.tab-content {
+	padding-left: 30px; 
+	padding-right: 30px;
+}
+
+
+
+
+
+
 
 @media ( max-width : 585px ) {
 	.wizard {
