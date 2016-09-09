@@ -26,26 +26,24 @@
 </#macro>
 
 <#macro css controllerId="empty">
-	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/eilkurier.css" rel="stylesheet">
-	<link href="/css/dragula.min.css" rel="stylesheet">
+	<link href="/bower_components/dragula/dist/dragula.min.css" rel="stylesheet">
 	<link href="/css/buttons.css" rel="stylesheet">
 	<link href="/css/${controllerId}.css" rel="stylesheet">
 	<!--[if lt IE 9]>
-		<script src="/js/external/html5shiv.js"></script>
-	    <script src="/js/external/respond.min.js"></script>
+		<script src="/bower_components/html5shiv/dist/html5shiv.js"></script>
 	<![endif]-->
 	
 	<link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </#macro>
 
 <#macro js controllerId="empty">
-    <script src="/js/external/jquery.js"></script>
-    <script src="/js/external/list.min.js"></script>
-    <script src="/js/external/bootstrap.min.js"></script>
-    <script src="/js/external/bootstrap.file-input.js"></script>
-    <script src="/js/external/jquery.easing.min.js"></script>
-    <script src="/js/external/dragula.min.js"></script>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/list.js/dist/list.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/jquery.easing/js/jquery.easing.min.js"></script>
+    <script src="/bower_components/dragula/dist/dragula.min.js"></script>
     <script src="/js/app/common.js"></script>
 	<script src="/js/app/${controllerId}.js"></script>
 </#macro>
