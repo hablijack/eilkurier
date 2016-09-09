@@ -24,7 +24,7 @@ public class HomepageTest {
 
     @Test
     public void check_navigation_presence() {
-        open("http://localhost:8080");
+        open("https://eilkurier.herokuapp.com");
         $("nav.navbar").should(exist);
         $$("nav.navbar ul li").shouldHave( sizeGreaterThan(2) );
     }
