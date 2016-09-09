@@ -1,5 +1,9 @@
-.wizard {
-	margin: 20px auto;
+body {
+	background-color: white;
+}
+
+#wrapper {
+    width: 900px;
 }
 
 .wizard h1 {
@@ -109,7 +113,7 @@ span.round-tab:hover {
 	margin: 0 auto;
 	bottom: 0px;
 	border: 10px solid transparent;
-	border-bottom-color: white;
+	border-bottom-color: #f9f7f1;
    -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -o-transition: all 1s ease;
@@ -124,7 +128,7 @@ span.round-tab:hover {
 	margin: 0 auto;
 	bottom: 0px;
 	border: 30px solid transparent;
-	border-bottom-color: white;
+	border-bottom-color: #f9f7f1;
 }
 
 .wizard .nav-tabs>li a {
@@ -152,7 +156,7 @@ span.round-tab:hover {
 }
 
 .wizard form {
-	   background-color: white;
+	   background-color: #f9f7f1;
 }
 
 .categorycontainer {
@@ -173,14 +177,34 @@ span.round-tab:hover {
 .wrapper {
   display: table;
 }
+
+#categories, #usercategories {
+	float: left;
+	width: 50%;
+}
+
+#categories .filtersection, #usercategories .filtersection{
+	background-color: #6b2f1b;
+	width: 100%;
+	height: 50px;
+	border: 1px solid black;
+	padding-top: 8px;
+}
+
+#categories .filtersection {
+	border-radius: 0 30px 0 0;
+}
+
+#usercategories .filtersection {
+	border-radius: 30px 0 0 0;
+}
+
 .categorycontainer {
   display: block;
-  background-color: rgba(255, 255, 255, 0.2);
-  width: 400px;
-  height: 300px;
+  height: 500px;
   overflow: scroll;
-  float: left;
-  background-color: #f9f7f1;
+  width: 100%;
+  background-color: white;
   padding: 8px;
   overflow-x: hidden;
   font-family: "Lucida Grande",Verdana,Arial,Helvetica,sans-serif;
@@ -209,13 +233,12 @@ span.round-tab:hover {
 .tab-content {
 	padding-left: 30px; 
 	padding-right: 30px;
+	padding-bottom: 100px;
 }
 
-
-
-
-
-
+.page-content {
+	margin-bottom: 0px;
+}
 
 @media ( max-width : 585px ) {
 	.wizard {

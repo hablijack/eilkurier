@@ -8,18 +8,21 @@
                         <form role="form">
                             <div class="tab-content">
                                 <div class="tab-pane active" role="tabpanel" id="step1">
+                                
                                     <h1>Willkommen in Deiner<br/> Nachrichtenzentrale</h1>
                                     <h2>Schritt 1: Deine Interessen</h2>
-                                    
-                                    <p>
-                                        Als Erstes solltest Du dir überlegen, welche Art von Nachrichten Dich interessieren. 
-                                        Du kannst hier schon mal ein
-                                    </p>
-                                    
-                                    <@dragndropcategory/>
+                                    <div class="col-md-4">
+                                        <p>
+                                            Als Erstes solltest Du dir überlegen, welche Art von Nachrichten Dich interessieren. 
+                                            Du kannst hier schon mal ein
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <@dragndropcategory/>
+                                    </div>
                                     
                                     <ul class="list-inline pull-right">
-                                        <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
+                                        <li><button type="button" class="btn btn-primary next-step">speichern und weiter</button></li>
                                     </ul>
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="step2">
@@ -27,8 +30,8 @@
                                     <h2>Schritt 2: Woher kommen deine News?</h2>
                                     <p>Als nächstes brauchen wir Quellen für deine Nachrichten. Wir verwenden hier RSS.</p>
                                     <ul class="list-inline pull-right">
-                                        <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                                        <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
+                                        <li><button type="button" class="btn btn-default prev-step">Zurück</button></li>
+                                        <li><button type="button" class="btn btn-primary next-step">speichern und weiter</button></li>
                                     </ul>
                                 </div>
                                
@@ -49,12 +52,27 @@
 
 <#macro dragndropcategory>
     <div id="wrapper">
-        <ul class="categorycontainer container" id="usercategories"></ul>
-        <ul class="categorycontainer container" id="categories">
-          <#list categories as category>
-              <li>${category.description}</li>
-          </#list>
-        </ul>
+        <div id="usercategories">
+            <div class="filtersection"></div>
+            <ul class="categorycontainer container"></ul>
+        </div>
+        <div id="categories">
+            <div class="filtersection">
+                <div class="col-md-8">
+                    <input class="search form-control" placeholder="Search" />
+                </div>
+                <a class="sort btn btn-default" data-sort="name">
+                    Sort by name
+                </a>
+            </div>
+            <ul class="categorycontainer container list">
+              <#list categories as category>
+                  <li>
+                        <span class="name">${category.description}</span>
+                  </li>
+              </#list>
+            </ul>
+        </div>
     </div>
 </#macro>
 

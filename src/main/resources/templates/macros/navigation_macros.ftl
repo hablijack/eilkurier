@@ -2,9 +2,9 @@
 	<nav class="navbar navbar-eilkurier navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <@navigationLinks />
-                
                 <@navigationBrand />
+            
+                <@navigationLinks />
                 
                 <@userArea loggedIn=currentUser?has_content />
             </div>
@@ -17,7 +17,7 @@
 	<div class="navbar-brand">
         <a href="/index.html">
         	<img src="/img/logo_header.png" />
-        	<span class="brand-name">Eilkurier.de</span>
+        	<span class="brand-name">Eilkurier</span>
         </a>
     </div>
 </#macro>

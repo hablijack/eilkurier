@@ -109,7 +109,16 @@ a {
 }
 
 .navbar-eilkurier .navbar-brand {
-	margin-left: 35px !important;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 5px;
+    text-align: center;
+    margin: auto;
+}
+
+.navbar-eilkurier .navbar-brand .brand-name {
+	    margin-left: -15px;
 }
 
 .navbar-eilkurier .navbar-brand a {
@@ -132,9 +141,6 @@ a {
 
 .navbar-eilkurier .navbar-brand a img {
 	max-height: 49px;
-	position: relative;
-	top: -14px;
-	float: left;
 }
 
 .navbar-eilkurier .navbar-right li a:hover, .navbar-eilkurier .navbar-right li a:active,
@@ -171,10 +177,29 @@ a {
 }
 
 #footer {
-	margin-top: 60px;
 	color: white;
 	font-family: 'Brawler', serif;
 }
+#footer img {
+	margin-top: 20px;
+}
 #footer a {
 	color: white;
+}
+
+#footer h1 {
+	color: white;
+}
+
+#footer h1:before {
+	border-color: white;
+	width: 220px;
+}
+
+#footer h1:after {
+    border-color: white;
+    width: 140px;
+}
+.page-content {
+	margin-bottom: 60px;
 }
