@@ -1,5 +1,6 @@
 body {
 	background-color: #6b2f1b;
+	padding-top: 20px;
 }
 
 #wrapper {
@@ -7,6 +8,7 @@ body {
 }
 
 .wizard h1 {
+    padding-top: 20px;
 	margin-top: 0px;
 }
 
@@ -59,6 +61,10 @@ body {
 	z-index: 1;
 }
 
+.navbar-fixed-top {
+    display: none;
+}
+
 .navbar-slogan {
 	display: none;
 }
@@ -74,7 +80,7 @@ body {
 
 span.round-tab {
 	display: inline-block;
-	background: #f9f7f1;
+	background: #6b2f1b;
 	border: 2px solid white;
 	z-index: 2;
 	position: absolute;
@@ -89,20 +95,20 @@ span.round-tab i {
 }
 
 .wizard li.active span.round-tab {
-	//border: 2px solid black;
-	background-color: white;
-	color: #6b2f1b;
+	border: 2px solid white;
+	background-color: #6b2f1b;
+	color: white;
 	font-weight: bold;
 }
 
 .wizard li.active span.round-tab i {
-	color: #6b2f1b;
+	color: white;
 	margin-right: 10px;
 }
 
 span.round-tab:hover {
-	color: #333;
-	//border: 2px solid #333;
+	color: white;
+	border: 2px solid #333;
 }
 
 .wizard .nav-tabs>li {
@@ -155,6 +161,9 @@ span.round-tab:hover {
 	position: relative;
 }
 
+h3:before, h3:after {
+    border: none;
+}
 .wizard h3 {
 	margin-top: 0;
 }
@@ -188,20 +197,20 @@ span.round-tab:hover {
 }
 
 #categories .filtersection, #usercategories .filtersection{
-	background-color: #6b2f1b;
+	background-color: none;
 	width: 100%;
 	height: 50px;
-	border: 1px solid black;
+	border: none
 	padding-top: 8px;
 }
 
-#categories .filtersection {
+/*#categories .filtersection {
 	border-radius: 0 30px 0 0;
 }
 
 #usercategories .filtersection {
 	border-radius: 30px 0 0 0;
-}
+}*/
 
 .categorycontainer {
   display: block;
