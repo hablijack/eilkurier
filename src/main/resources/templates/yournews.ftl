@@ -10,17 +10,19 @@
                                 <div class="tab-pane active" role="tabpanel" id="step1">
                                     <h1>Willkommen in Deiner<br/> Nachrichtenzentrale</h1>
                                     <h2>Schritt 1: Deine Interessen</h2>
-                                    <div class="col-md-4">
-                                        <h2>Erklärung</h2>
-                                        <p>
+                                    <div class="col-md-3">
+                                        <h3>Erklärung</h3>
+                                        <p class="text-justify">
                                             Als Erstes solltest Du dir überlegen, welche Art von Nachrichten Dich interessieren. 
                                             Du kannst hier schon mal eine Art Vorauswahl der Themen treffen, über die Du auf dem
                                             Laufenden gehalten werden möchtest. Ziehe dazu einfach mit der Maus die Interessen von
-                                            rechts nach links in den "INTERESSIERT MICH" Kasten.<br/>
+                                            rechts nach links.
+                                        </p>
+                                        <p>
                                             <i>Tipp: Du kannst deine Auswahl später jederzeit anpassen und langweilige Themen wieder entfernen.</i>
                                         </p>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-md-5">
                                         <@dragndropcategory/>
                                     </div>
                                     
