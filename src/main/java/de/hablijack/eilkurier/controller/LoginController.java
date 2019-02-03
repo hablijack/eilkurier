@@ -13,12 +13,12 @@ import java.util.Optional;
 @Controller
 class LoginController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public ModelAndView getLoginPage(@RequestParam Optional<String> error) {
-        LOGGER.debug("Getting login page, error={}", error);
-        return new ModelAndView("test/login", "error", error);
-    }
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public ModelAndView getLoginPage(@RequestParam Optional<String> error) {
+		LOGGER.debug("Getting login page, error={}", error);
+		return new ModelAndView("test/login", "error", error);
+	}
 
 }

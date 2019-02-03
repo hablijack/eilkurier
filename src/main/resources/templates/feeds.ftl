@@ -1,8 +1,8 @@
 <@layout.basic>
 	<section id="categories" class="page-content">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
 					<h1 class="feedHeadline">Quellen</h1>
 				</div>
 			</div>

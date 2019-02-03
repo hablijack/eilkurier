@@ -1,6 +1,5 @@
 package de.hablijack.eilkurier.service;
 
-
 import java.util.List;
 import java.util.Optional;
 
@@ -16,30 +15,30 @@ import de.hablijack.eilkurier.repository.CategoryRepository;
 @Service
 public class CategoryServiceImpl implements CategoryService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(CategoryServiceImpl.class);
-    
-    @Autowired
-    private CategoryRepository categoryRepository;
+	private static final Logger LOGGER = LoggerFactory.getLogger(CategoryServiceImpl.class);
 
-    @Override
-    public Category create(CategoryCreateForm form) {
-        Category category = new Category();
-        
-        category.setName(form.getName());
-        category.setDescription(form.getDescription());
-        return categoryRepository.save(category);
-    }
+	@Autowired
+	private CategoryRepository categoryRepository;
+
+	@Override
+	public Category create(CategoryCreateForm form) {
+		Category category = new Category();
+
+		category.setName(form.getName());
+		category.setDescription(form.getDescription());
+		return categoryRepository.save(category);
+	}
 
 	@Override
 	public List<Category> getAllCategories() {
-		 LOGGER.debug("Getting categories");
-	     return categoryRepository.findAll();
+		LOGGER.debug("Getting categories");
+		return categoryRepository.findAll();
 	}
-    
+
 	@Override
-	public Category getCategoryById(long id) {
-		 LOGGER.debug("Getting user={}", id);
-	     return categoryRepository.findOne(id);
+	public Optional<Category> getCategoryById(long id) {
+		LOGGER.debug("Getting user={}", id);
+		return categoryRepository.findById(id);
 	}
 
 	@Override

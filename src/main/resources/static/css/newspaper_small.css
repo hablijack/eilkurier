@@ -1,0 +1,21 @@
+.collumns .collumn-small {
+	width: 17%;
+	border: 1px solid gray;
+}
+
+.collumns .collumn-small .body img  {
+	max-width: 300px;	
+}
+
+.collumns .collumn-small .footer {
+	margin-bottom: 100px;
+}
+.collumns .collumn-small .feedimg {
+	bottom: 40px;
+}
+.collumns .collumn-small .headline.hl1 {
+	font-weight: 700;
+	font-size: 20px;
+	text-transform: none;
+	padding: 10px 0 10px 0;
+}

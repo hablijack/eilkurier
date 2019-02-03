@@ -1,0 +1,18 @@
+.collumns .collumn-large {
+	width: 45%;
+	border: 1px solid gray;
+}
+
+.collumn-large .body img {
+	float: left;
+	max-width: 350px;
+	width: 350px;
+	height: auto;
+}
+
+.collumns .collumn-large .headline.hl1 {
+	font-weight: 700;
+	font-size: 30px;
+	text-transform: uppercase;
+	padding: 10px 0 10px 0;
+}

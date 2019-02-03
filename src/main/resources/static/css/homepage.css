@@ -41,6 +41,19 @@
 
 #homepage-content .item {
 	padding-top: 80px;
+	height: 100%;
+}
+
+#homepage-content .item div{
+	width: 30%;
+	display: inline-block;
+}
+
+#homepage-content .item .left {
+	margin-left: 15%;
+}
+#homepage-content .item .right {
+	margin-right: 15%;
 }
 
 #homepage-content .newspaper {

@@ -8,6 +8,6 @@ import de.hablijack.eilkurier.domain.Category;
 
 public interface CategoryRepository extends JpaRepository<Category, Long> {
 
-	 Optional<Category> findOneByName(String name);
+	Optional<Category> findOneByName(String name);
 
 }

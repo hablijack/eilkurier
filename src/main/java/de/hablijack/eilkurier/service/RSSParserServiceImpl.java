@@ -11,11 +11,11 @@ import com.rometools.rome.io.XmlReader;
 @Service
 public class RSSParserServiceImpl implements RSSParserService {
 
-    @Override
-    public SyndFeed parse(String url) throws IllegalArgumentException, FeedException, IOException {
-        URL feedUrl = new URL(url);
-        SyndFeedInput input = new SyndFeedInput();
-        return input.build(new XmlReader(feedUrl));
-    }
+	@Override
+	public SyndFeed parse(String url) throws IllegalArgumentException, FeedException, IOException {
+		URL feedUrl = new URL(url);
+		SyndFeedInput input = new SyndFeedInput();
+		return input.build(new XmlReader(feedUrl));
+	}
 
 }

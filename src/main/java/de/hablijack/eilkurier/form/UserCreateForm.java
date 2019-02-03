@@ -1,6 +1,6 @@
 package de.hablijack.eilkurier.form;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import  javax.validation.constraints.NotEmpty;
 
 import de.hablijack.eilkurier.domain.Role;
 

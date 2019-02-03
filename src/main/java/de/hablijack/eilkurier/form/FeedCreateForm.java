@@ -1,21 +1,21 @@
 package de.hablijack.eilkurier.form;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import  javax.validation.constraints.NotEmpty;
 
 public class FeedCreateForm {
 
-    @NotEmpty
-    private String name = "";
-    
-    @NotEmpty
-    private String url = "";
-    
-    private String description = "";
+	@NotEmpty
+	private String name = "";
 
-    private byte[] picture;
-    
-    private String pictureContentType;
-    
+	@NotEmpty
+	private String url = "";
+
+	private String description = "";
+
+	private byte[] picture;
+
+	private String pictureContentType;
+
 	public String getPictureContentType() {
 		return pictureContentType;
 	}
@@ -55,6 +55,5 @@ public class FeedCreateForm {
 	public void setPicture(byte[] picture) {
 		this.picture = picture;
 	}
-
 
 }

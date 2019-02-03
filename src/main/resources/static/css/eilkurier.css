@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Brawler);
+
 @import url(http://fonts.googleapis.com/css?family=Playfair+Display);
 
 body {
@@ -110,16 +111,16 @@ a {
 }
 
 .navbar-eilkurier .navbar-brand {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 5px;
-    text-align: center;
-    margin: auto;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 5px;
+	text-align: center;
+	margin: auto;
 }
 
 .navbar-eilkurier .navbar-brand .brand-name {
-	    margin-left: -15px;
+	margin-left: -15px;
 }
 
 .navbar-eilkurier .navbar-brand a {
@@ -181,9 +182,11 @@ a {
 	color: white;
 	font-family: 'Brawler', serif;
 }
+
 #footer img {
 	margin-top: 20px;
 }
+
 #footer a {
 	color: white;
 }
@@ -198,9 +201,10 @@ a {
 }
 
 #footer h1:after {
-    border-color: white;
-    width: 140px;
+	border-color: white;
+	width: 140px;
 }
+
 .page-content {
 	margin-bottom: 60px;
 }

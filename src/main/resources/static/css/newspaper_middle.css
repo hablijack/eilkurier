@@ -1,0 +1,17 @@
+.collumns .collumn-middle {
+	width: 30%;
+	border: 1px solid gray;
+}
+
+.collumns .collumn-middle .body img {
+	float: left;
+	max-width: 250px;
+	width: 250px;
+	height: auto;
+}
+.collumns .collumn-middle .headline.hl1 {
+	font-weight: 700;
+	font-size: 27px;
+	text-transform: none;
+	padding: 10px 0 10px 0;
+}

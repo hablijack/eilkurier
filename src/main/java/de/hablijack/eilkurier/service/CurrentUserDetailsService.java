@@ -1,6 +1,5 @@
 package de.hablijack.eilkurier.service;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,20 +13,20 @@ import de.hablijack.eilkurier.domain.EilkurierUser;
 @Service
 class CurrentUserDetailsService implements UserDetailsService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(CurrentUserDetailsService.class);
-    private final UserService userService;
+	private static final Logger LOGGER = LoggerFactory.getLogger(CurrentUserDetailsService.class);
+	private final UserService userService;
 
-    @Autowired
-    private CurrentUserDetailsService(UserService userService) {
-        this.userService = userService;
-    }
+	@Autowired
+	private CurrentUserDetailsService(UserService userService) {
+		this.userService = userService;
+	}
 
-    @Override
-    public CurrentUser loadUserByUsername(String email) throws UsernameNotFoundException {
-        LOGGER.debug("Authenticating user with email={}", email.replaceFirst("@.*", "@***"));
-        EilkurierUser user = userService.getUserByEmail(email)
-                .orElseThrow(() -> new UsernameNotFoundException(String.format("User with email=%s was not found", email)));
-        return new CurrentUser(user);
-    }
+	@Override
+	public CurrentUser loadUserByUsername(String email) throws UsernameNotFoundException {
+		LOGGER.debug("Authenticating user with email={}", email.replaceFirst("@.*", "@***"));
+		EilkurierUser user = userService.getUserByEmail(email).orElseThrow(
+				() -> new UsernameNotFoundException(String.format("User with email=%s was not found", email)));
+		return new CurrentUser(user);
+	}
 
 }

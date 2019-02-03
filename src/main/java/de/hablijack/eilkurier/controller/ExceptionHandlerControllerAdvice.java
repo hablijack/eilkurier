@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ControllerAdvice
 class ExceptionHandlerControllerAdvice {
 
-    @ExceptionHandler(NoSuchElementException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String handleNoSuchElementException(NoSuchElementException e) {
-        return e.getMessage();
-    }
+	@ExceptionHandler(NoSuchElementException.class)
+	@ResponseStatus(HttpStatus.NOT_FOUND)
+	public String handleNoSuchElementException(NoSuchElementException e) {
+		return e.getMessage();
+	}
 
 }

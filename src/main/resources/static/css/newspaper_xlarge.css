@@ -1,0 +1,23 @@
+.collumns .collumn-xlarge {
+	width: 64%;
+	border: 1px solid gray;
+}
+.collumns .collumn-xlarge .body img {
+	float: left;
+	width: 500px;
+	height: auto;
+}
+
+.collumns .collumn-xlarge .headline.hl6:before {
+	display: none;
+}
+
+.collumns .collumn-xlarge .headline.hl6:after {
+	display: none;
+}
+.collumns .collumn-xlarge .headline.hl1 {
+	font-weight: 700;
+	font-size: 33px;
+	text-transform: uppercase;
+	padding: 10px 0 10px 0;
+}

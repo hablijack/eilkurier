@@ -1,18 +1,18 @@
 package de.hablijack.eilkurier.form;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import  javax.validation.constraints.NotEmpty;
 
 public class CategoryCreateForm {
 
-    @NotEmpty
-    private String name = "";
-    
-    private String description = "";
+	@NotEmpty
+	private String name = "";
 
-    private byte[] picture;
-    
-    private String pictureContentType;
-    
+	private String description = "";
+
+	private byte[] picture;
+
+	private String pictureContentType;
+
 	public String getName() {
 		return name;
 	}
@@ -44,6 +44,5 @@ public class CategoryCreateForm {
 	public void setPictureContentType(String pictureContentType) {
 		this.pictureContentType = pictureContentType;
 	}
-
 
 }

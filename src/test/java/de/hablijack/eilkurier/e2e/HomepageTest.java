@@ -1,6 +1,6 @@
 package de.hablijack.eilkurier.e2e;
 
-import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
+/*import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -28,4 +28,4 @@ public class HomepageTest {
         $("nav.navbar").should(exist);
         $$("nav.navbar ul li").shouldHave( sizeGreaterThan(2) );
     }
-}
+}*/

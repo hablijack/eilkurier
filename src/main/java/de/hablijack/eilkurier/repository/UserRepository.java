@@ -8,5 +8,5 @@ import de.hablijack.eilkurier.domain.EilkurierUser;
 
 public interface UserRepository extends JpaRepository<EilkurierUser, Long> {
 
-    Optional<EilkurierUser> findOneByEmail(String email);
+	Optional<EilkurierUser> findOneByEmail(String email);
 }

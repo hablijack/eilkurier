@@ -1,6 +1,5 @@
 package de.hablijack.eilkurier.service;
 
-
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -12,12 +11,14 @@ import de.hablijack.eilkurier.form.FeedCreateForm;
 
 public interface FeedService {
 
-    Feed getFeedById(long id);
+	Optional<Feed> getFeedById(long id);
 
-    Feed create(FeedCreateForm form) throws IllegalArgumentException, FeedException, IOException;
+	List<Feed> getFeedsByCategoryId(long categoryId);
+
+	Feed create(FeedCreateForm form) throws IllegalArgumentException, FeedException, IOException;
 
 	Optional<Feed> getFeedByName(String name);
-	
+
 	List<Feed> getAllFeeds();
 
 }

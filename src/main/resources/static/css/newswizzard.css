@@ -1,0 +1,404 @@
+body {
+	background-color: #6b2f1b;
+	padding-top: 20px;
+}
+
+.wizard h1 {
+	padding-top: 20px;
+	margin-top: 0px;
+}
+
+.wizard h1::before, .wizard h1::after {
+	border-top: none;
+	border-bottom: none;
+}
+
+.wizard h2 {
+	text-transform: none;
+	font-weight: normal;
+}
+
+.infobox {
+	margin-top: 50px;
+}
+
+.infotext {
+	font-size: 1.4em;
+}
+
+.wizard h2::before {
+	border-top: 1px solid #2f2f2f;
+	content: "";
+	display: block;
+	margin: 0 auto;
+	width: 500px;
+}
+
+.wizard h2::after, .wizard h3::after {
+	border-bottom: 1px solid #2f2f2f;
+	content: "";
+	display: block;
+	height: 10px;
+	margin: 0 auto;
+	width: 300px;
+}
+
+.wizard .nav-tabs {
+	position: relative;
+	margin-bottom: 0;
+}
+
+.wizard>div.wizard-inner {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+.connecting-line {
+	height: 2px;
+	background: white;
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 35%;
+	z-index: 1;
+}
+
+.navbar-fixed-top {
+	display: none;
+}
+
+.navbar-slogan {
+	display: none;
+}
+
+.wizard .nav-tabs>li.active>a, .wizard .nav-tabs>li.active>a:hover, .wizard .nav-tabs>li.active>a:focus {
+	color: black;
+	cursor: default;
+	border: 0;
+	border-bottom-color: transparent;
+	background: transparent;
+}
+
+span.round-tab, span.round-tab:hover {
+	display: inline-block;
+	background: #6b2f1b;
+	border: 2px solid white;
+	z-index: 2;
+	position: absolute;
+	left: 0;
+	text-align: center;
+	font-size: 25px;
+	padding: 3px 20px;
+}
+
+span.round-tab i {
+	color: #777;
+}
+
+.wizard li.active span.round-tab {
+	border: 2px solid white;
+	background-color: #6b2f1b;
+	color: white;
+	font-weight: bold;
+}
+
+.wizard li.active span.round-tab i {
+	color: white;
+	margin-right: 10px;
+}
+
+.wizard .nav-tabs>li {
+	width: 25%;
+}
+
+.wizard li:after {
+	content: " ";
+	position: absolute;
+	left: 36%;
+	opacity: 0;
+	margin: 0 auto;
+	bottom: 0px;
+	border: 10px solid transparent;
+	border-bottom-color: #f9f7f1;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease ease-out;
+	-o-transition: all 0.3s ease ease-out;
+	transition: all 0.3s ease ease-out;
+}
+
+.wizard li.active:after {
+	content: " ";
+	position: absolute;
+	left: 40%;
+	opacity: 1;
+	margin: 0 auto;
+	bottom: 0px;
+	border: 30px solid transparent;
+	border-bottom-color: #f9f7f1;
+}
+
+.wizard .nav-tabs>li a {
+	width: 220px;;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 35px;
+	padding: 0;
+	color: #777;
+	background: transparent;
+}
+
+.wizard .nav-tabs>li a:hover {
+	background: transparent;
+	border: none;
+}
+
+.wizard .tab-pane {
+	position: relative;
+}
+
+h3:before, h3:after {
+	border: none;
+}
+
+.wizard h3 {
+	margin-top: 0;
+}
+
+.wizard form {
+	background-color: #f9f7f1;
+}
+
+.categorycontainer {
+	background-color: rgba(255, 255, 255, 0.2);
+	display: table-cell;
+	width: 50%;
+	position: relative;
+}
+
+.categorycontainer li {
+	cursor: grab;
+	list-style: none;
+}
+
+.wrapper {
+	display: table;
+}
+
+.next-step {
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+
+.next-step .glyphicon, .prev-step .glyphicon {
+	font-size: 109px;
+}
+
+.prev-step {
+	position: absolute;
+	top: 10px;
+	left: 0;
+}
+
+.arrow-left {
+	width: 0;
+	border-top: 270px solid transparent;
+	border-bottom: 270px solid transparent;
+	border-right: 91px solid #6b2f1b;
+	float: left;
+	margin-top: 0;
+}
+
+#categories, #usercategories {
+	float: left;
+	width: 400px;
+}
+
+#usercategories {
+	height: auto;
+	background-color: white;
+	border: 1px dotted black;
+	margin-top: 35px;
+}
+
+#categories .filtersection {
+	padding: 5px;
+	background-color: #6b2f1b;
+	text-align: center;
+}
+
+.filtersection .search {
+	display: inline-block;
+	width: 175px;
+}
+
+.usercontainer {
+	margin-right: 20px;
+	overflow: hidden;
+}
+
+.categorycontainer {
+	display: block;
+	height: 500px;
+	overflow: scrolll;
+	width: 100%;
+	background-color: #6b2f1b;
+	padding: 8px;
+	overflow-x: hidden;
+	font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	border: none;
+}
+
+#usercategories .categorycontainer {
+	background-color: white;
+	color: black;
+}
+
+#categories .categorycontainer>li, .gu-mirror {
+	margin: 10px;
+	padding: 10px;
+	background-color: white;
+	color: black;
+	transition: opacity 0.4s ease-in-out;
+	list-style: none;
+	border-radius: 10px;
+}
+
+#usercategories .categorycontainer>li, .gu-mirror {
+	margin: 10px;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	transition: opacity 0.4s ease-in-out;
+	list-style: none;
+	border-radius: 10px;
+}
+
+.categorycontainer>li {
+	cursor: move;
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+}
+
+.tab-content {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 100px;
+}
+
+.page-content {
+	margin-bottom: 0px;
+}
+
+.feedContainer.active {
+	background-color: white;
+	border: 2px solid black;
+	text-align: center;
+	margin: 0 20px 20px 0;
+	padding: 15px;
+	color: black;
+	width: 185px;
+}
+
+.feedContainer {
+	background-color: none;
+	border: 2px dotted gray;
+	text-align: center;
+	margin: 0 20px 20px 0;
+	padding: 15px;
+	color: gray;
+	min-height: 260px;
+	width: 185px;
+}
+
+.feedContainer img {
+	background-color: gray;
+	margin-bottom: 10px;
+	filter: grayscale(100%);
+	max-height: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+}
+
+.feedContainer.active img {
+	filter: none;
+	background-color: #6b2f1b;
+}
+
+.feedContainer h3 {
+	font-size: 17px;
+}
+
+.feedContainer h3:after {
+	border: none;
+	width: auto;
+}
+
+.feedContainer .bootstrap-switch {
+	position: absolute;
+	bottom: 14px;
+	left: 14px;
+}
+
+#step2 h2 {
+	margin-bottom: 50px;
+}
+
+ul.feedsorter {
+	background-color: #6b2f1b;
+	padding: 10px;
+}
+
+ul.feedsorter li {
+	line-height: 65px;
+	list-style: none;
+	font-size: 2em;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-bottom: 5px;
+	padding: 10px;
+	color: black;
+	background-color: white;
+	cursor: pointer;
+}
+
+ul.feedsorter li img {
+	max-height: 65px;
+}
+
+.exit {
+	text-align: center;
+	margin-top: 50px;
+}
+
+.exit .btn {
+	font-size: 30px;
+}
+
+@media ( max-width : 585px ) {
+	.wizard {
+		width: 90%;
+		height: auto !important;
+	}
+	span.round-tab {
+		font-size: 16px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+	.wizard .nav-tabs>li a {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+	.wizard li.active:after {
+		content: " ";
+		position: absolute;
+		left: 35%;
+	}
+}
