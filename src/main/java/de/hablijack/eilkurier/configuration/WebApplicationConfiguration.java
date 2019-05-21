@@ -14,7 +14,7 @@ class WebApplicationConfiguration implements WebMvcConfigurer {
 	private String urlAbsolutePath;
 	@Value("${url.protocol}")
 	private String urlProtocol;
-	
+
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
 		registry.addInterceptor(new ModelBaseInterceptor(urlProtocol + urlAbsolutePath)).addPathPatterns("/**");

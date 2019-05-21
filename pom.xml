@@ -5,7 +5,7 @@
 
 	<groupId>de.hablijack</groupId>
 	<artifactId>eilkurier</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>2.0.0-SNAPSHOT</version>
 
 	<name>eilkurier</name>
 	<url>https://habel.ddnss.de:8080</url>
@@ -13,14 +13,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.2.RELEASE</version>
+		<version>2.1.5.RELEASE</version>
 	</parent>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>11</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<docker.image.prefix>springio</docker.image.prefix>
+		<docker.image.prefix>eilkurier</docker.image.prefix>
 	</properties>
 
 	<dependencies>
@@ -65,7 +65,7 @@
 		<dependency>
 			<groupId>org.jsoup</groupId>
 			<artifactId>jsoup</artifactId>
-			<version>1.11.3</version>
+			<version>1.12.1</version>
 		</dependency>
 
 		<dependency>
@@ -88,7 +88,7 @@
 		<dependency>
 			<groupId>com.codeborne</groupId>
 			<artifactId>selenide</artifactId>
-			<version>5.1.0</version>
+			<version>5.2.3</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

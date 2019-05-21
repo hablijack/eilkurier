@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import de.hablijack.eilkurier.service.CategoryService;
 
 @Controller
-class YourNewsController {
+class bYourNewsController {
 
     @Autowired
     private CategoryService categoryService;

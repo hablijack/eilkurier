@@ -34,7 +34,7 @@ import de.hablijack.eilkurier.repository.InfoRepository;
 
 @Configuration
 @EnableScheduling
-public class FeedParser {
+public class 	FeedParser {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(FeedParser.class);
 	@Autowired
@@ -45,7 +45,7 @@ public class FeedParser {
 	// Every 10 Minutes (600000ms)
 	@Scheduled(fixedDelay = 600000)
 	public void fetchInfos() throws IllegalArgumentException, FeedException, IOException {
-		LOGGER.info("=> Beginning Fetch Process");
+		//LOGGER.info("=> Beginning Fetch Process");
 		List<Feed> allFeeds = feedRepository.findAll();
 		for (Feed feed : allFeeds) {
 			try {
@@ -54,7 +54,7 @@ public class FeedParser {
 				LOGGER.error("Fehler beim Parsen von: " + feed.getName() + " \r\n" + e.getMessage());
 			}
 		}
-		LOGGER.info("=> Ending Fetch Process");
+		//LOGGER.info("=> Ending Fetch Process");
 		System.out.println(infoRepository.findAll().size());
 	}
 
@@ -115,7 +115,7 @@ public class FeedParser {
 
 	@Async
 	private void fetchInfosForFeed(Feed feed) throws IllegalArgumentException, FeedException, IOException {
-		LOGGER.debug("==> Reading Feed: " + feed.getName());
+		//LOGGER.debug("==> Reading Feed: " + feed.getName());
 
 		CloseableHttpClient client = HttpClients.createMinimal();
 		HttpUriRequest request = new HttpGet(feed.getUrl());
@@ -134,7 +134,7 @@ public class FeedParser {
 		for (Object entry : xml.getEntries()) {
 			SyndEntryImpl currentEntry = (SyndEntryImpl) entry;
 			if (!infoRepository.existsByTitleAndFeed(currentEntry.getTitleEx().getValue(), feed)) {
-				LOGGER.info("===> Fetching Info");
+				//LOGGER.info("===> Fetching Info");
 				Info info = new Info();
 
 				info.setFeed(feed);
@@ -173,12 +173,12 @@ public class FeedParser {
 				} else {
 					info.setLink(currentEntry.getLink());
 				}
-				LOGGER.info("===> Saving Info...");
+				//LOGGER.info("===> Saving Info...");
 				infoRepository.save(info);
 			} else {
 				LOGGER.info("===> Message already exists");
 			}
 		}
-		LOGGER.info("==> End Reading Feed");
+		//LOGGER.info("==> End Reading Feed");
 	}
 }

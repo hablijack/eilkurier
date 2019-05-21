@@ -53,15 +53,15 @@ class FeedController {
 	@RequestMapping(value = "/feed/{id}", method = RequestMethod.GET)
 	public String getFeedById(Model model, @PathVariable("id") int id) {
 		LOGGER.debug("Getting feed by id");
-		model.addAttribute("feed", feedService.getFeedById(id));
+		model.addAttribute("feed", feedService.getFeedById(id).get());
 		return "feed_view";
 	}
 
 	@ResponseBody
 	@RequestMapping(value = "/feed/{id}.json", method = RequestMethod.GET)
-	public Optional<Feed> getJSONFeedById(Model model, @PathVariable("id") int id) {
+	public Feed getJSONFeedById(Model model, @PathVariable("id") int id) {
 		LOGGER.debug("Getting feed by id");
-		return feedService.getFeedById(id);
+		return feedService.getFeedById(id).get();
 	}
 	
 	@ResponseBody

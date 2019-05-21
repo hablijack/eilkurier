@@ -1,5 +1,5 @@
 /* USERS */
-INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (1, 'root@eilkurier.com', '$2a$10$cK3ntN4YVdM2OhDrqH4X2.bSFr1YGPxkSXAkhOVWQtKVoczbk9S/G', 'ADMIN', true);
+INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (1, 'root@eilkurier.com', '$2a$10$unFTU8X2nUSVN4i2auaTZe4Q6nquiWB2dWIYgkI96yRcZXOKGBhMi', 'ADMIN', true);
 INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (2, 'christoph.habel@posteo.de', '$2a$10$cK3ntN4YVdM2OhDrqH4X2.bSFr1YGPxkSXAkhOVWQtKVoczbk9S/G', 'USER', false);
 INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (3, 'christoph.habel@gmx.de', '$2a$10$cK3ntN4YVdM2OhDrqH4X2.bSFr1YGPxkSXAkhOVWQtKVoczbk9S/G', 'USER', true);
 
