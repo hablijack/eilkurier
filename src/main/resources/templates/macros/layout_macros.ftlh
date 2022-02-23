@@ -1,11 +1,11 @@
 <#macro basic>
 	<#local template><#nested></#local>
-	<#include "../layout/basic.ftl" />
+	<#include "../layout/basic.ftlh" />
 </#macro>
 
 <#macro newspaper>
 	<#local template><#nested></#local>
-	<#include "../layout/newspaper.ftl" />
+	<#include "../layout/newspaper.ftlh" />
 </#macro>
 
 <#macro doctype>

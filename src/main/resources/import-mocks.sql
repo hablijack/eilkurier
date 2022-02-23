@@ -1,7 +1,7 @@
 /* USERS */
-INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (1, 'root@eilkurier.com', '$2a$10$unFTU8X2nUSVN4i2auaTZe4Q6nquiWB2dWIYgkI96yRcZXOKGBhMi', 'ADMIN', true);
-INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (2, 'christoph.habel@posteo.de', '$2a$10$cK3ntN4YVdM2OhDrqH4X2.bSFr1YGPxkSXAkhOVWQtKVoczbk9S/G', 'USER', false);
-INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (3, 'christoph.habel@gmx.de', '$2a$10$cK3ntN4YVdM2OhDrqH4X2.bSFr1YGPxkSXAkhOVWQtKVoczbk9S/G', 'USER', true);
+INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (1, 'root@eilkurier.com', '$2a$12$lR8br37GgROfZH2raCuA6OXk8VpNkq9M3ipJm71ndkRDr.lTbfG6i', 'ADMIN', true);
+INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (2, 'christoph.habel@posteo.de', '$2a$12$lR8br37GgROfZH2raCuA6OXk8VpNkq9M3ipJm71ndkRDr.lTbfG6i', 'USER', false);
+INSERT INTO eilkurier_user(id, email, password_hash, role, wizzard_run_flag) VALUES (3, 'christoph.habel@gmx.de', '$2a$12$lR8br37GgROfZH2raCuA6OXk8VpNkq9M3ipJm71ndkRDr.lTbfG6i', 'USER', true);
 
 /* FEEDS */
 INSERT INTO feed(id, name, description, picture, picture_content_type, url) VALUES (1, 'Golem.de News', 'IT-News fuer Profis', 'https://www.golem.de/staticrl/images/golem-rss.png', 'image/png', 'https://rss.golem.de/rss.php?feed=ATOM2.0');
